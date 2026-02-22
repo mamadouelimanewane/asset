@@ -5,7 +5,7 @@ import {
     Settings, ChevronsLeft, ChevronsRight, Zap, Shield, HelpCircle, MessageCircle, Bell,
     Grid3X3, GitBranch, Target, Award, BookOpen, Gem, Globe, Eye, Sliders, BarChart3,
     FolderOpen, CheckSquare, AlertTriangle, Heart, Trophy, Crown,
-    Sparkles, Brain, Cpu, Smartphone
+    Sparkles, Brain, Cpu, Smartphone, Database
 } from 'lucide-react';
 
 const navSections = [
@@ -84,6 +84,7 @@ const navSections = [
             { to: '/integrations', icon: Zap, label: 'Intégrations', badge: '6' },
             { to: '/notifications', icon: Bell, label: 'Notifications', badge: '5' },
             { to: '/compliance', icon: Shield, label: 'Conformité' },
+            { to: '/admin', icon: Database, label: 'Admin. Système' },
             { to: '/audit', icon: Eye, label: 'Audit trail' },
             { to: '/settings', icon: Settings, label: 'Paramètres' },
             { to: '/education', icon: BookOpen, label: 'Centre éducatif' },

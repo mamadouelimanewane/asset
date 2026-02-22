@@ -49,6 +49,7 @@ import DigitalTwin from './pages/DigitalTwin';
 import ClientExperience from './pages/ClientExperience';
 import SecurityNext from './pages/SecurityNext';
 import ESGCarbon from './pages/ESGCarbon';
+import SystemAdministration from './pages/SystemAdministration';
 import './index.css';
 
 function App() {
@@ -117,6 +118,7 @@ function App() {
             <Route path="/client-experience" element={<ClientExperience />} />
             <Route path="/security" element={<SecurityNext />} />
             <Route path="/esg" element={<ESGCarbon />} />
+            <Route path="/admin" element={<SystemAdministration />} />
           </Routes>
         </main>
         <DiambarAI />
