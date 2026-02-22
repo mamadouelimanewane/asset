@@ -5,19 +5,18 @@ import {
     Settings, ChevronsLeft, ChevronsRight, Zap, Shield, HelpCircle, MessageCircle, Bell,
     Grid3X3, GitBranch, Target, Award, BookOpen, Gem, Globe, Eye, Sliders, BarChart3,
     FolderOpen, CheckSquare, AlertTriangle, Heart, Trophy, Crown,
-    Sparkles, Brain, Cpu, Smartphone, Database
+    Sparkles, Brain, Cpu, Smartphone, Database, ShieldAlert, Palmtree, Building2, MapPin
 } from 'lucide-react';
+
 
 const navSections = [
     {
-        title: '🌟 Modules Premium',
+        title: '🌟 Élite & Corporate',
         items: [
-            { to: '/wealth-pocket', icon: Smartphone, label: 'Wealth Pocket' },
+            { to: '/concierge', icon: Palmtree, label: 'Conciergerie & CBI' },
+            { to: '/corporate-wealth', icon: Building2, label: 'Holding & ESOP' },
             { to: '/web3', icon: Globe, label: 'Web3 & RWA' },
             { to: '/market-intelligence', icon: LineChart, label: 'Intelligence Marché' },
-            { to: '/digital-twin', icon: Brain, label: 'Digital Twin' },
-            { to: '/client-experience', icon: Sparkles, label: 'Expérience Client' },
-            { to: '/security', icon: Shield, label: 'Sécurité Next-Gen' },
             { to: '/esg', icon: Target, label: 'ESG & Carbone' },
         ],
     },
@@ -67,15 +66,14 @@ const navSections = [
         ],
     },
     {
-        title: 'Opérations',
+        title: 'Légal & Conformité',
         items: [
+            { to: '/legal-tax', icon: Calculator, label: 'Fiscalité & DGID' },
+            { to: '/aml', icon: ShieldAlert, label: 'LCB-FT & Sanctions' },
             { to: '/billing', icon: Receipt, label: 'Facturation' },
             { to: '/reporting', icon: FileText, label: 'Rapports' },
-            { to: '/tax', icon: Calculator, label: 'Gestion fiscale' },
             { to: '/estate-planning', icon: GitBranch, label: 'Succession' },
-            { to: '/reports', icon: BarChart3, label: 'Rapports avancés' },
-            { to: '/documents', icon: FolderOpen, label: 'Documents' },
-            { to: '/african-payments', icon: Globe, label: 'Paiements Africains' },
+            { to: '/african-payments', icon: MapPin, label: 'Trésorerie Panafricaine' },
         ],
     },
     {

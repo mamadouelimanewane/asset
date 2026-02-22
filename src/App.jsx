@@ -50,6 +50,10 @@ import ClientExperience from './pages/ClientExperience';
 import SecurityNext from './pages/SecurityNext';
 import ESGCarbon from './pages/ESGCarbon';
 import SystemAdministration from './pages/SystemAdministration';
+import CorporateWealth from './pages/CorporateWealth';
+import ComplianceAML from './pages/ComplianceAML';
+import LegalTax from './pages/LegalTax';
+import Concierge from './pages/Concierge';
 import './index.css';
 
 function App() {
@@ -119,6 +123,10 @@ function App() {
             <Route path="/security" element={<SecurityNext />} />
             <Route path="/esg" element={<ESGCarbon />} />
             <Route path="/admin" element={<SystemAdministration />} />
+            <Route path="/corporate-wealth" element={<CorporateWealth />} />
+            <Route path="/aml" element={<ComplianceAML />} />
+            <Route path="/legal-tax" element={<LegalTax />} />
+            <Route path="/concierge" element={<Concierge />} />
           </Routes>
         </main>
         <DiambarAI />
