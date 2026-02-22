@@ -66,7 +66,7 @@ function PatrimonyGlobe({ allocations }) {
                     const ly = 120 + 70 * Math.sin(midAngle);
                     return (
                         <g key={i}>
-                            <path d={`M 120 120 L ${x1} ${y1} A 100 100 0 ${large} 1 ${x2} ${y2} Z`}
+                            <path d={`M 120 120 L ${x1} ${y1} A 100 100 0 FCFA{large} 1 FCFA{x2} ${y2} Z`}
                                 fill={a.color} opacity="0.7" stroke="rgba(10,15,8,0.5)" strokeWidth="1.5" />
                             {pct > 0.07 && <text x={lx} y={ly} textAnchor="middle" fill="white" fontSize="10" fontWeight="700" dy="4">{Math.round(pct * 100)}%</text>}
                         </g>

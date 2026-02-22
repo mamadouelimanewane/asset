@@ -43,7 +43,7 @@ export default function Compliance() {
                         { icon: '🏛️', title: 'Réglementé SEC & FINRA', desc: 'Conformité totale avec les régulateurs étatiques et fédéraux', status: 'Actif' },
                         { icon: '🛡️', title: 'Garantie de protection des actifs', desc: 'Remboursement des pertes dues à une activité non autorisée', status: 'Actif' },
                         { icon: '🔒', title: 'Règle de protection des clients', desc: 'Actifs clients séparés des fonds de la société', status: 'Actif' },
-                        { icon: '🏦', title: 'Assurance FDIC', desc: 'Jusqu\'à 3M $ individuel, 6M $ conjoint sur les comptes cash', status: 'Actif' },
+                        { icon: '🏦', title: 'Assurance FDIC', desc: 'Jusqu\'à 3M FCFA individuel, 6M FCFA conjoint sur les comptes cash', status: 'Actif' },
                         { icon: '📋', title: 'Excédent SIPC via Lloyd\'s', desc: 'Couverture supplémentaire au-delà du SIPC standard', status: 'Actif' },
                         { icon: '🔐', title: 'SOC 2 Type II', desc: 'Audit indépendant des systèmes et contrôles', status: 'Certifié' },
                     ].map(item => (

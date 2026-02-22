@@ -46,7 +46,7 @@ const CustomTooltip = ({ active, payload, label }) => {
                 {payload.map((p, i) => (
                     <p key={i} style={{ color: p.color }}>
                         {p.name}: {typeof p.value === 'number' && p.name.includes('AUM')
-                            ? `${p.value}M $`
+                            ? `${p.value}M FCFA`
                             : `${p.value}%`
                         }
                     </p>
@@ -123,7 +123,7 @@ export default function Dashboard() {
                                 </defs>
                                 <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" />
                                 <XAxis dataKey="month" stroke="var(--text-muted)" fontSize={11} />
-                                <YAxis stroke="var(--text-muted)" fontSize={11} tickFormatter={(v) => `${v}M $`} />
+                                <YAxis stroke="var(--text-muted)" fontSize={11} tickFormatter={(v) => `${v}M FCFA`} />
                                 <Tooltip content={<CustomTooltip />} />
                                 <Area
                                     type="monotone"

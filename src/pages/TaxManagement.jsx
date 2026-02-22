@@ -75,7 +75,7 @@ export default function TaxManagement() {
                                 <BarChart data={monthlyTLH}>
                                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" />
                                     <XAxis dataKey="month" stroke="var(--text-muted)" fontSize={11} />
-                                    <YAxis stroke="var(--text-muted)" fontSize={11} tickFormatter={v => `${(v / 1000).toFixed(0)}K $`} />
+                                    <YAxis stroke="var(--text-muted)" fontSize={11} tickFormatter={v => `${(v / 1000).toFixed(0)}K FCFA`} />
                                     <Tooltip
                                         formatter={v => formatCurrency(v)}
                                         contentStyle={{
@@ -190,7 +190,7 @@ export default function TaxManagement() {
                         </div>
                         {[
                             { label: 'Activer le scan TLH quotidien', checked: true },
-                            { label: 'Exécution automatique si perte > 1 000 $', checked: false },
+                            { label: 'Exécution automatique si perte > 1 000 FCFA', checked: false },
                             { label: 'Rééquilibrage fiscal par défaut', checked: true },
                             { label: 'Notifier le conseiller avant exécution', checked: true },
                             { label: 'Inclure dans les rapports trimestriels', checked: true },

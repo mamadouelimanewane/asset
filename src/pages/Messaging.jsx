@@ -11,14 +11,14 @@ import { formatDate } from '../utils/helpers';
 const mockConversations = [
     {
         id: 'conv1', clientId: 'C001', clientName: 'Aminata Sow',
-        lastMessage: 'Moussa, je vais recevoir un bonus de 150K $ le mois prochain. Comment l\'investir au mieux ?',
+        lastMessage: 'Moussa, je vais recevoir un bonus de 150K FCFA le mois prochain. Comment l\'investir au mieux ?',
         lastTime: '2025-02-22T09:15:00', unread: 2, pinned: true, starred: true, archived: false,
         messages: [
             { id: 'm1', sender: 'client', text: 'Bonjour Moussa, j\'espère que vous allez bien !', time: '2025-02-21T14:30:00', read: true },
             { id: 'm2', sender: 'advisor', text: 'Bonjour Aminata ! Oui très bien, merci. Comment puis-je vous aider aujourd\'hui ?', time: '2025-02-21T14:35:00', read: true },
-            { id: 'm3', sender: 'client', text: 'J\'ai une excellente nouvelle. Mon entreprise m\'a confirmé un bonus annuel de 150 000 $ qui sera versé début mars.', time: '2025-02-21T15:00:00', read: true },
+            { id: 'm3', sender: 'client', text: 'J\'ai une excellente nouvelle. Mon entreprise m\'a confirmé un bonus annuel de 150 000 FCFA qui sera versé début mars.', time: '2025-02-21T15:00:00', read: true },
             { id: 'm4', sender: 'advisor', text: 'Félicitations ! C\'est une belle somme. Avant de vous faire des recommandations, quelques questions :\n\n1. Avez-vous des engagements financiers prévus prochainement ?\n2. Souhaitez-vous augmenter votre allocation en actions ou diversifier vers d\'autres classes ?\n3. Avez-vous budgeté une part pour votre fonds d\'urgence ?', time: '2025-02-21T15:10:00', read: true },
-            { id: 'm5', sender: 'client', text: 'Moussa, je vais recevoir un bonus de 150K $ le mois prochain. Comment l\'investir au mieux ?', time: '2025-02-22T09:15:00', read: false },
+            { id: 'm5', sender: 'client', text: 'Moussa, je vais recevoir un bonus de 150K FCFA le mois prochain. Comment l\'investir au mieux ?', time: '2025-02-22T09:15:00', read: false },
             { id: 'm6', sender: 'client', text: 'J\'aimerais aussi en parler à mon mari avant de prendre une décision finale.', time: '2025-02-22T09:16:00', read: false },
         ],
     },
@@ -56,7 +56,7 @@ const mockConversations = [
         lastTime: '2025-02-18T16:45:00', unread: 0, pinned: false, starred: false, archived: false,
         messages: [
             { id: 'm40', sender: 'client', text: 'Moussa, j\'ai vu une opération PYPL → XLF dans mon relevé. Pouvez-vous m\'expliquer ?', time: '2025-02-18T14:00:00', read: true },
-            { id: 'm41', sender: 'advisor', text: 'Bien sûr Ibrahima ! C\'est une opération de **récolte de pertes fiscales** (Tax-Loss Harvesting). Voici comment ça fonctionne :\n\n📉 Votre position PYPL était en perte de 2 100 $\n🔄 Nous avons vendu PYPL et acheté XLF (ETF financier similaire)\n💰 La perte de 2 100 $ est maintenant **déductible** de vos impôts\n✅ Votre exposition au marché reste identique\n\nRésultat net : vous économisez environ 780 $ d\'impôts sans changer votre stratégie d\'investissement.', time: '2025-02-18T15:30:00', read: true },
+            { id: 'm41', sender: 'advisor', text: 'Bien sûr Ibrahima ! C\'est une opération de **récolte de pertes fiscales** (Tax-Loss Harvesting). Voici comment ça fonctionne :\n\n📉 Votre position PYPL était en perte de 2 100 FCFA\n🔄 Nous avons vendu PYPL et acheté XLF (ETF financier similaire)\n💰 La perte de 2 100 FCFA est maintenant **déductible** de vos impôts\n✅ Votre exposition au marché reste identique\n\nRésultat net : vous économisez environ 780 FCFA d\'impôts sans changer votre stratégie d\'investissement.', time: '2025-02-18T15:30:00', read: true },
             { id: 'm42', sender: 'client', text: 'Merci pour les explications sur la récolte de pertes fiscales.', time: '2025-02-18T16:45:00', read: true },
         ],
     },

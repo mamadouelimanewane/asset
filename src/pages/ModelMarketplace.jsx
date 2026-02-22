@@ -90,7 +90,7 @@ export default function ModelMarketplace() {
                             </div>
                             <div>
                                 <div style={{ fontSize: 14, fontWeight: 600 }}>
-                                    {(model.minInvestment / 1000).toFixed(0)}K $
+                                    {(model.minInvestment / 1000).toFixed(0)}K FCFA
                                 </div>
                                 <div style={{ fontSize: 10, color: 'var(--text-muted)' }}>Investissement min.</div>
                             </div>

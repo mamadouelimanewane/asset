@@ -111,7 +111,7 @@ export default function PortfolioManagement() {
                                     fill="none" stroke="var(--kd-success)" strokeWidth="3"
                                 />
                                 <polyline
-                                    points={`20,200 ${PERF_HISTORY.map((p, i) => `${i * 80 + 30},${200 - (p.val - 500) * 2}`).join(' ')} 590,200`}
+                                    points={`20,200 FCFA{PERF_HISTORY.map((p, i) => `${i * 80 + 30},${200 - (p.val - 500) * 2}`).join(' ')} 590,200`}
                                     fill="url(#chartGrad)"
                                 />
                                 {PERF_HISTORY.map((p, i) => (

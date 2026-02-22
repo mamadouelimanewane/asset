@@ -53,7 +53,7 @@ export default function Web3Assets() {
             <div className="stat-grid" style={{ marginBottom: 'var(--space-5)' }}>
                 <div className="stat-card" style={{ borderLeft: '4px solid #818cf8', background: 'rgba(79, 70, 229, 0.05)' }}>
                     <div className="stat-icon" style={{ background: 'rgba(79, 70, 229, 0.1)', color: '#818cf8' }}><Wallet size={20} /></div>
-                    <div className="stat-value" style={{ color: '#c7d2fe' }}>$14.2M</div>
+                    <div className="stat-value" style={{ color: '#c7d2fe' }}>1 FCFA4.2M</div>
                     <div className="stat-label">AUM Total (On-Chain)</div>
                 </div>
                 <div className="stat-card" style={{ borderLeft: '4px solid var(--kd-success)' }}>
@@ -196,9 +196,9 @@ export default function Web3Assets() {
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)', marginTop: 'var(--space-3)' }}>
                             {[
-                                { pool: 'USDC/USDT Stable LP', protocol: 'Curve Finance', network: 'Ethereum', apy: '7.8%', tvl: '$1.2B', risk: 'Faible' },
-                                { pool: 'wBTC Staking', protocol: 'Aave V3', network: 'Arbitrum', apy: '4.2%', tvl: '$800M', risk: 'Faible' },
-                                { pool: 'Liquid Staking ETH', protocol: 'Lido', network: 'Ethereum', apy: '3.5%', tvl: '$20B', risk: 'Faible' }
+                                { pool: 'USDC/USDT Stable LP', protocol: 'Curve Finance', network: 'Ethereum', apy: '7.8%', tvl: '1.2 FCFAB', risk: 'Faible' },
+                                { pool: 'wBTC Staking', protocol: 'Aave V3', network: 'Arbitrum', apy: '4.2%', tvl: '8 FCFA00M', risk: 'Faible' },
+                                { pool: 'Liquid Staking ETH', protocol: 'Lido', network: 'Ethereum', apy: '3.5%', tvl: '2 FCFA0B', risk: 'Faible' }
                             ].map((yieldOp, idx) => (
                                 <div key={idx} style={{ padding: 'var(--space-3)', background: 'var(--bg-tertiary)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-primary)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <div>
@@ -237,7 +237,7 @@ export default function Web3Assets() {
                                 <ShieldCheck size={20} color="#10B981" />
                                 <span style={{ fontSize: 11, fontWeight: 700, color: '#10B981' }}>ACTIF</span>
                             </div>
-                            <div style={{ fontSize: 15, fontWeight: 700, marginBottom: 4 }}>Règle de quorum (Tx > $50k)</div>
+                            <div style={{ fontSize: 15, fontWeight: 700, marginBottom: 4 }}>Règle de quorum (Tx > 5 FCFA0k)</div>
                             <div style={{ fontSize: 12, color: 'var(--text-secondary)' }}>Nécessite 3 des 5 fondateurs pour signer cryptographiquement la transaction.</div>
                         </div>
                         <div style={{ padding: 'var(--space-4)', background: 'var(--bg-elevated)', borderRadius: 'var(--radius-md)', borderTop: '3px solid var(--kd-copper-light)' }}>

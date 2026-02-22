@@ -59,7 +59,7 @@ export default function ClientPortal() {
                     <div className="stat-grid">
                         <div className="stat-card copper">
                             <div className="stat-icon"><DollarSign size={20} /></div>
-                            <div className="stat-value">2,45M $</div>
+                            <div className="stat-value">2,45M FCFA</div>
                             <div className="stat-label">Valeur totale du portefeuille</div>
                             <div className="stat-change positive">+3,2% ce mois</div>
                         </div>
@@ -70,7 +70,7 @@ export default function ClientPortal() {
                         </div>
                         <div className="stat-card diamond">
                             <div className="stat-icon"><BarChart3 size={20} /></div>
-                            <div className="stat-value">125K $</div>
+                            <div className="stat-value">125K FCFA</div>
                             <div className="stat-label">Trésorerie (Haut rendement)</div>
                             <div className="stat-change positive">4,85% TAE</div>
                         </div>

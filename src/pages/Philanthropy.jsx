@@ -49,7 +49,7 @@ export default function Philanthropy() {
                 </div>
                 <div className="stat-card" style={{ borderLeft: '4px solid #f59e0b' }}>
                     <div className="stat-icon"><Landmark size={20} color="#f59e0b" /></div>
-                    <div className="stat-value">5.8M $</div>
+                    <div className="stat-value">5.8M FCFA</div>
                     <div className="stat-label">Fonds Waqf Sous-Gestion</div>
                 </div>
             </div>
@@ -121,24 +121,24 @@ export default function Philanthropy() {
                         <div style={{ marginTop: 'var(--space-4)' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 12, paddingBottom: 12, borderBottom: '1px solid var(--border-primary)' }}>
                                 <span style={{ color: 'var(--text-muted)' }}>Liquidités bancaires</span>
-                                <span style={{ fontFamily: 'monospace', fontWeight: 700 }}>$1,200,000</span>
+                                <span style={{ fontFamily: 'monospace', fontWeight: 700 }}>1,200,000 FCFA</span>
                             </div>
                             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 12, paddingBottom: 12, borderBottom: '1px solid var(--border-primary)' }}>
                                 <span style={{ color: 'var(--text-muted)' }}>Actions & Sukuks (Valeur Nette)</span>
-                                <span style={{ fontFamily: 'monospace', fontWeight: 700 }}>$13,500,000</span>
+                                <span style={{ fontFamily: 'monospace', fontWeight: 700 }}>1 FCFA3,500,000</span>
                             </div>
                             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 12, paddingBottom: 12, borderBottom: '1px solid var(--border-primary)' }}>
                                 <span style={{ color: 'var(--text-muted)' }}>Or physique & Métaux</span>
-                                <span style={{ fontFamily: 'monospace', fontWeight: 700 }}>$300,000</span>
+                                <span style={{ fontFamily: 'monospace', fontWeight: 700 }}>3 FCFA00,000</span>
                             </div>
                             <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: 8, marginTop: 8 }}>
                                 <span style={{ fontWeight: 800, fontSize: 16 }}>Base Zakat Globale</span>
-                                <span style={{ fontSize: 18, color: '#10b981', fontWeight: 800, fontFamily: 'monospace' }}>$15,000,000</span>
+                                <span style={{ fontSize: 18, color: '#10b981', fontWeight: 800, fontFamily: 'monospace' }}>1 FCFA5,000,000</span>
                             </div>
 
                             <div style={{ marginTop: 24, padding: 'var(--space-4)', background: 'rgba(200, 121, 65, 0.1)', border: '1px solid var(--kd-copper)', borderRadius: 'var(--radius-md)', textAlign: 'center' }}>
                                 <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--kd-copper-light)', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 8 }}>Montant exigible (2.5%)</div>
-                                <div style={{ fontSize: 36, fontWeight: 900, color: 'white', fontFamily: 'monospace' }}>$375,000</div>
+                                <div style={{ fontSize: 36, fontWeight: 900, color: 'white', fontFamily: 'monospace' }}>3 FCFA75,000</div>
                                 <button className="btn btn-primary" style={{ marginTop: 16, background: '#10b981', color: 'black', fontWeight: 800 }}>Préparer le transfert</button>
                             </div>
                         </div>

@@ -31,7 +31,7 @@ const CHURN_RISK = [
             { icon: '📉', text: 'Connexions portail : -70% vs mois dernier' },
             { icon: '❓', text: '3 questions sans réponse depuis 18 jours' },
             { icon: '💬', text: 'Ton du dernier email : neutre → négatif (NLP)' },
-            { icon: '💰', text: 'Retrait partiel de 80K$ il y a 3 semaines' },
+            { icon: '💰', text: 'Retrait partiel de 80K FCFA il y a 3 semaines' },
         ],
         recommendation: 'Appel personnel ce vendredi. Préparer comparaison performance vs benchmark. Proposer revue gratuite.',
         value: 2_800_000,
@@ -65,7 +65,7 @@ const UPCOMING_MEETINGS = [
                 { prob: 84, question: 'Concentration tech à 22% — dois-je m\'inquiéter ?' },
                 { prob: 71, question: 'Rééquilibrage vers les actifs africains — timing ?' },
             ],
-            opportunities: ['Augmenter exposition BRVM', 'Plan successoral incomplet', 'Cash idle de 120K$'],
+            opportunities: ['Augmenter exposition BRVM', 'Plan successoral incomplet', 'Cash idle de 120K FCFA'],
             riskTopics: ['Actualités Angola — client inquiet'],
             prepTime: '~8 min de lecture',
         }
@@ -75,7 +75,7 @@ const UPCOMING_MEETINGS = [
         aiPrep: {
             mood: '😐 Neutre (pas d\'événement récent)',
             topicsProbable: [
-                { prob: 88, question: 'Mon projet immobilier à Saly — puis-je débloquer 180K$ ?' },
+                { prob: 88, question: 'Mon projet immobilier à Saly — puis-je débloquer 180K FCFA ?' },
                 { prob: 65, question: 'Couverture contre la baisse du FCFA ?' },
             ],
             opportunities: ['Assurance décès inexistante', 'Objectif éducation enfants non formalisé'],

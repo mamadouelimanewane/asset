@@ -66,7 +66,7 @@ export default function ExecutiveDashboard() {
                 <div className="card-glass" style={{ borderTop: '3px solid #C87941', padding: 'var(--space-4)', position: 'relative', overflow: 'hidden' }}>
                     <div style={{ position: 'absolute', top: -20, right: -20, opacity: 0.1 }}><Building2 size={100} /></div>
                     <div style={{ color: 'var(--text-secondary)', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 8 }}>AUM Global (Actifs)</div>
-                    <div style={{ fontSize: 32, fontWeight: 900, color: 'white', fontFamily: 'monospace' }}>68.5M $</div>
+                    <div style={{ fontSize: 32, fontWeight: 900, color: 'white', fontFamily: 'monospace' }}>68.5M FCFA</div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8, fontSize: 13, color: 'var(--kd-success)', fontWeight: 700 }}>
                         <TrendingUp size={16} /> +12.4% (vs T4)
                     </div>
@@ -75,7 +75,7 @@ export default function ExecutiveDashboard() {
                 <div className="card-glass" style={{ borderTop: '3px solid #10B981', padding: 'var(--space-4)', position: 'relative', overflow: 'hidden' }}>
                     <div style={{ position: 'absolute', top: -20, right: -20, opacity: 0.1 }}><Activity size={100} /></div>
                     <div style={{ color: 'var(--text-secondary)', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 8 }}>Revenus Nette (YTD)</div>
-                    <div style={{ fontSize: 32, fontWeight: 900, color: 'white', fontFamily: 'monospace' }}>1.35M $</div>
+                    <div style={{ fontSize: 32, fontWeight: 900, color: 'white', fontFamily: 'monospace' }}>1.35M FCFA</div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8, fontSize: 13, color: 'var(--kd-success)', fontWeight: 700 }}>
                         <TrendingUp size={16} /> +17.3% (vs T4)
                     </div>
@@ -95,7 +95,7 @@ export default function ExecutiveDashboard() {
                     <div style={{ color: 'var(--text-secondary)', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 8 }}>Clients Actifs (UHNWI)</div>
                     <div style={{ fontSize: 32, fontWeight: 900, color: 'white', fontFamily: 'monospace' }}>142</div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8, fontSize: 13, color: 'var(--kd-copper-light)', fontWeight: 700 }}>
-                        <Briefcase size={16} /> NNA: +8.2M $ (Nouveaux capitaux)
+                        <Briefcase size={16} /> NNA: +8.2M FCFA (Nouveaux capitaux)
                     </div>
                 </div>
             </div>
@@ -211,7 +211,7 @@ export default function ExecutiveDashboard() {
                     <div style={{ marginTop: 'var(--space-4)', display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
                         <div style={{ padding: 'var(--space-3)', background: 'rgba(0,0,0,0.2)', borderRadius: 'var(--radius-md)', borderLeft: '3px solid var(--kd-success)' }}>
                             <div style={{ fontSize: 12, fontWeight: 700, marginBottom: 4 }}>Opportunité d'Upsell Détectée</div>
-                            <div style={{ fontSize: 12, color: 'var(--text-secondary)', lineHeight: 1.5 }}>Les réserves de liquidité du <strong>Groupe Seck</strong> ont doublé le mois dernier (1.2M $ inutilisés). Déclenchez la proposition "Dette Privée Africaine" (Taux: 9.5%). Probabilité de conversion: 88%.</div>
+                            <div style={{ fontSize: 12, color: 'var(--text-secondary)', lineHeight: 1.5 }}>Les réserves de liquidité du <strong>Groupe Seck</strong> ont doublé le mois dernier (1.2M FCFA inutilisés). Déclenchez la proposition "Dette Privée Africaine" (Taux: 9.5%). Probabilité de conversion: 88%.</div>
                             <button className="btn btn-primary btn-sm" style={{ marginTop: 8, padding: '4px 12px', fontSize: 10 }}>Générer le mandat automatisé</button>
                         </div>
 

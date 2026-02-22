@@ -42,7 +42,7 @@ export default function EstatePlanning() {
             <div className="stat-grid" style={{ marginBottom: 'var(--space-5)' }}>
                 <div className="stat-card" style={{ borderLeft: '4px solid var(--kd-copper)' }}>
                     <div className="stat-icon"><Landmark size={20} /></div>
-                    <div className="stat-value">55M $</div>
+                    <div className="stat-value">55M FCFA</div>
                     <div className="stat-label">Patrimoine Familial Consolidé</div>
                 </div>
                 <div className="stat-card" style={{ borderLeft: '4px solid #8b5cf6' }}>
@@ -76,7 +76,7 @@ export default function EstatePlanning() {
                         <div style={{ padding: 'var(--space-3)', width: 250, background: 'linear-gradient(180deg, var(--kd-copper-dark), var(--bg-elevated))', border: '1px solid var(--kd-copper)', borderRadius: 'var(--radius-md)', textAlign: 'center' }}>
                             <div style={{ fontWeight: 800, fontSize: 16 }}>Modou Gueye (Patriarche)</div>
                             <div style={{ fontSize: 12, color: 'var(--text-secondary)' }}>Usufruitier • 100% Droits de vote</div>
-                            <div style={{ fontSize: 14, fontWeight: 700, color: 'white', marginTop: 8 }}>Valorisation: 45M $</div>
+                            <div style={{ fontSize: 14, fontWeight: 700, color: 'white', marginTop: 8 }}>Valorisation: 45M FCFA</div>
                         </div>
 
                         <div style={{ height: 40, width: 2, background: 'var(--kd-copper-light)' }}></div>
@@ -96,14 +96,14 @@ export default function EstatePlanning() {
                                 <div style={{ position: 'absolute', top: -20, left: '50%', width: 2, height: 20, background: 'var(--border-primary)' }}></div>
                                 <div style={{ fontWeight: 700, fontSize: 14 }}>Aïssatou Gueye (Fille)</div>
                                 <div style={{ fontSize: 11, color: 'var(--text-secondary)' }}>Nue-propriétaire (50%)</div>
-                                <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--kd-success)', marginTop: 8 }}>Avenir: +22M $</div>
+                                <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--kd-success)', marginTop: 8 }}>Avenir: +22M FCFA</div>
                             </div>
                             {/* Enfant 2 */}
                             <div style={{ position: 'relative', padding: 'var(--space-3)', width: 200, background: 'var(--bg-elevated)', border: '1px solid var(--border-primary)', borderRadius: 'var(--radius-md)', textAlign: 'center' }}>
                                 <div style={{ position: 'absolute', top: -20, left: '50%', width: 2, height: 20, background: 'var(--border-primary)' }}></div>
                                 <div style={{ fontWeight: 700, fontSize: 14 }}>Cheikh Gueye (Fils)</div>
                                 <div style={{ fontSize: 11, color: 'var(--text-secondary)' }}>Nue-propriétaire (50%)</div>
-                                <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--kd-success)', marginTop: 8 }}>Avenir: +22M $</div>
+                                <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--kd-success)', marginTop: 8 }}>Avenir: +22M FCFA</div>
                             </div>
                         </div>
                     </div>
@@ -114,7 +114,7 @@ export default function EstatePlanning() {
                 <div className="grid-2">
                     <div className="card">
                         <div className="card-header">
-                            <h3>Impact Fiscal : Transmission d'un portefeuille de 55M $</h3>
+                            <h3>Impact Fiscal : Transmission d'un portefeuille de 55M FCFA</h3>
                         </div>
                         <div style={{ height: 300, marginTop: 'var(--space-4)' }}>
                             <ResponsiveContainer width="100%" height="100%">
@@ -131,7 +131,7 @@ export default function EstatePlanning() {
                         </div>
                         <div style={{ marginTop: 'var(--space-4)', padding: 'var(--space-3)', background: 'rgba(16, 185, 129, 0.1)', border: '1px dashed rgba(16, 185, 129, 0.3)', borderRadius: 'var(--radius-md)' }}>
                             <span style={{ fontWeight: 700, color: '#10B981', display: 'flex', alignItems: 'center', gap: 8 }}><ShieldCheck size={16} /> Recommandation Stratégique</span>
-                            <p style={{ margin: '8px 0 0 0', fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.5 }}>L'utilisation combinée d'une Holding Structurante (Pacte d'actionnaires) et d'une donation en démembrement de propriété permet d'économiser près de <strong>11.3M $</strong> en droits de mutation par rapport au régime de droit commun (Sénégal/Côte d'Ivoire).</p>
+                            <p style={{ margin: '8px 0 0 0', fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.5 }}>L'utilisation combinée d'une Holding Structurante (Pacte d'actionnaires) et d'une donation en démembrement de propriété permet d'économiser près de <strong>11.3M FCFA</strong> en droits de mutation par rapport au régime de droit commun (Sénégal/Côte d'Ivoire).</p>
                         </div>
                     </div>
                 </div>

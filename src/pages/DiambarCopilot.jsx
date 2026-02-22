@@ -20,7 +20,7 @@ const QUICK_PROMPTS = [
     { label: '📄 Analyser contrat', prompt: 'Analyse ce contrat de gestion et identifie les clauses défavorables.' },
     { label: '⚖️ Veille CREPMF', prompt: 'Y a-t-il des nouvelles réglementations BCEAO ou CREPMF qui affectent nos clients ce mois-ci ?' },
     { label: '🌍 Risque marché', prompt: 'Quel est l\'impact de la montée du dollar sur les portefeuilles de nos clients exposés au FCFA ?' },
-    { label: '💼 Proposition Ba', prompt: 'Rédige une proposition commerciale pour Cheikh K. Ba, prospect avec 800K $ à investir.' },
+    { label: '💼 Proposition Ba', prompt: 'Rédige une proposition commerciale pour Cheikh K. Ba, prospect avec 800K FCFA à investir.' },
 ];
 
 const MOCK_RESPONSES = {
@@ -33,14 +33,14 @@ const MOCK_RESPONSES = {
     }),
     rapport: {
         thinking: 2200,
-        content: `**Rapport narratif de performance — Ousmane N'Diaye** *(Généré par Diambar AI)*\n\n---\n\n**📊 Synthèse Février 2025**\n\nMonsieur N'Diaye, votre portefeuille affiche une performance remarquable de **+2,4%** sur le mois de février, portant votre rendement annualisé à **+19,2%** — significativement au-dessus du benchmark MSCI World (+2,1%).\n\n**Points forts du mois :**\n- L'exposition internationale (VXUS, 500 parts récemment acquises) a contribué positivement à hauteur de **+0,8%**\n- Votre allocation en obligations africaines a joué son rôle défensif lors de la correction du 12 février\n- La stratégie TLH activée sur VTI → ITOT a permis une économie fiscale estimée à **12 500 $**\n\n**Points de vigilance :**\n- La concentration en technologies américaines atteint 22% (seuil recommandé : 20%). Une légère réduction est conseillée.\n- L'objectif retraite 2035 affiche une confiance de 78% — en ligne avec votre trajectoire.\n\n**Perspectives :**\nAvec 8,5M $ sous gestion, votre patrimoine est sur la bonne trajectoire pour atteindre **10,2M $ à horizon 5 ans** dans le scénario de base.\n\n*Rapport généré automatiquement • Données au 22/02/2025 • À valider par votre conseiller*`,
+        content: `**Rapport narratif de performance — Ousmane N'Diaye** *(Généré par Diambar AI)*\n\n---\n\n**📊 Synthèse Février 2025**\n\nMonsieur N'Diaye, votre portefeuille affiche une performance remarquable de **+2,4%** sur le mois de février, portant votre rendement annualisé à **+19,2%** — significativement au-dessus du benchmark MSCI World (+2,1%).\n\n**Points forts du mois :**\n- L'exposition internationale (VXUS, 500 parts récemment acquises) a contribué positivement à hauteur de **+0,8%**\n- Votre allocation en obligations africaines a joué son rôle défensif lors de la correction du 12 février\n- La stratégie TLH activée sur VTI → ITOT a permis une économie fiscale estimée à **12 500 FCFA**\n\n**Points de vigilance :**\n- La concentration en technologies américaines atteint 22% (seuil recommandé : 20%). Une légère réduction est conseillée.\n- L'objectif retraite 2035 affiche une confiance de 78% — en ligne avec votre trajectoire.\n\n**Perspectives :**\nAvec 8,5M FCFA sous gestion, votre patrimoine est sur la bonne trajectoire pour atteindre **10,2M FCFA à horizon 5 ans** dans le scénario de base.\n\n*Rapport généré automatiquement • Données au 22/02/2025 • À valider par votre conseiller*`,
         sources: ['Portefeuille N\'Diaye (MIS)', 'Données de marché IB', 'Règles TLH KD'],
         confidence: 97,
         tokens: 412,
     },
     rdv: {
         thinking: 1500,
-        content: `**Préparation RDV — Aminata Sow** *(Diambar Copilot)*\n\n---\n\n**🎯 Questions probables (par ordre de probabilité)**\n\n**Très probable (>85%)**\n1. *"Ma performance de +12,3% est-elle bonne par rapport aux autres clients ?"*\n   → Réponse suggérée : Oui, elle place Madame Sow dans le top 30% de nos clients avec profil similaire. Benchmark : +9,2% (MSCI EM).\n\n2. *"Qu'est-ce qui se passe si les taux restent élevés longtemps ?"*\n   → Réponse suggérée : Votre allocation à 40% en obligations à taux variable vous protège. Impact simulé : -2,1% sur 12 mois.\n\n**Probable (60-85%)**\n3. *"Mon projet immobilier à Saly — quand puis-je débloquer des fonds ?"*\n   → 180K $ disponibles sans impact sur objectifs. Délai de liquidation : 3 jours.\n\n4. *"La dévaluation possible du FCFA m'inquiète."*\n   → 35% de ses actifs sont en USD — couverture naturelle suffisante.\n\n**À anticiper (40-60%)**\n5. *"Peut-on intégrer mon héritage familial dans la gestion ?"*\n   → Excellente opportunité d'estate planning. Préparer proposition succession.\n\n**⚡ Opportunités commerciales détectées**\n- Solde cash idle de 85K $ sur compte courant → proposer allocation money market\n- Pas de couverture décès → proposer assurance-vie\n- Fille bientôt à l'université → objectif éducation non formalisé\n\n**📝 Tone of voice recommandé :** Chaleureux, rassurant, pédagogique. Madame Sow apprécie les exemples concrets et les chiffres arrondis.`,
+        content: `**Préparation RDV — Aminata Sow** *(Diambar Copilot)*\n\n---\n\n**🎯 Questions probables (par ordre de probabilité)**\n\n**Très probable (>85%)**\n1. *"Ma performance de +12,3% est-elle bonne par rapport aux autres clients ?"*\n   → Réponse suggérée : Oui, elle place Madame Sow dans le top 30% de nos clients avec profil similaire. Benchmark : +9,2% (MSCI EM).\n\n2. *"Qu'est-ce qui se passe si les taux restent élevés longtemps ?"*\n   → Réponse suggérée : Votre allocation à 40% en obligations à taux variable vous protège. Impact simulé : -2,1% sur 12 mois.\n\n**Probable (60-85%)**\n3. *"Mon projet immobilier à Saly — quand puis-je débloquer des fonds ?"*\n   → 180K FCFA disponibles sans impact sur objectifs. Délai de liquidation : 3 jours.\n\n4. *"La dévaluation possible du FCFA m'inquiète."*\n   → 35% de ses actifs sont en USD — couverture naturelle suffisante.\n\n**À anticiper (40-60%)**\n5. *"Peut-on intégrer mon héritage familial dans la gestion ?"*\n   → Excellente opportunité d'estate planning. Préparer proposition succession.\n\n**⚡ Opportunités commerciales détectées**\n- Solde cash idle de 85K FCFA sur compte courant → proposer allocation money market\n- Pas de couverture décès → proposer assurance-vie\n- Fille bientôt à l'université → objectif éducation non formalisé\n\n**📝 Tone of voice recommandé :** Chaleureux, rassurant, pédagogique. Madame Sow apprécie les exemples concrets et les chiffres arrondis.`,
         sources: ['Profil comportemental Sow', 'Historique interactions CRM', 'Données portefeuille'],
         confidence: 88,
         tokens: 523,
@@ -128,8 +128,8 @@ export default function DiambarCopilot() {
 
     const renderMarkdown = (text) => {
         return text
-            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-            .replace(/\*(.*?)\*/g, '<em>$1</em>')
+            .replace(/\*\*(.*?)\*\*/g, '<strong>1 FCFA</strong>')
+            .replace(/\*(.*?)\*/g, '<em>1 FCFA</em>')
             .replace(/\n\n/g, '</p><p>')
             .replace(/\n/g, '<br/>')
             .replace(/^/, '<p>')
@@ -181,7 +181,7 @@ export default function DiambarCopilot() {
                         <div style={{ marginTop: 'var(--space-3)', padding: 'var(--space-3)', background: 'rgba(200,121,65,0.08)', borderRadius: 'var(--radius-md)', border: '1px solid rgba(200,121,65,0.15)' }}>
                             <div style={{ fontSize: 10, color: 'var(--kd-copper-light)', fontWeight: 600, marginBottom: 6 }}>📡 Contexte actuel</div>
                             <div style={{ fontSize: 10, color: 'var(--text-muted)', lineHeight: 1.5 }}>
-                                187 clients • AUM 61,5M$ • Bourse ouverte • 2 alertes conformité
+                                187 clients • AUM 61,5M FCFA • Bourse ouverte • 2 alertes conformité
                             </div>
                         </div>
                     </div>

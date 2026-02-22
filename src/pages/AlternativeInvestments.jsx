@@ -44,7 +44,7 @@ export default function AlternativeInvestments() {
             <div className="stat-grid" style={{ marginBottom: 'var(--space-5)' }}>
                 <div className="stat-card" style={{ borderLeft: '4px solid var(--kd-copper)' }}>
                     <div className="stat-icon"><Briefcase size={20} /></div>
-                    <div className="stat-value">12.5M $</div>
+                    <div className="stat-value">12.5M FCFA</div>
                     <div className="stat-label">Déployé (Capital Appelé)</div>
                 </div>
                 <div className="stat-card" style={{ borderLeft: '4px solid #10b981' }}>
@@ -157,14 +157,14 @@ export default function AlternativeInvestments() {
                             <tbody>
                                 <tr>
                                     <td style={{ fontWeight: 600 }}>AgriCorp Casamance</td>
-                                    <td style={{ fontFamily: 'monospace' }}>250K $</td>
-                                    <td style={{ fontFamily: 'monospace', color: 'var(--kd-success)' }}>295K $</td>
+                                    <td style={{ fontFamily: 'monospace' }}>250K FCFA</td>
+                                    <td style={{ fontFamily: 'monospace', color: 'var(--kd-success)' }}>295K FCFA</td>
                                     <td style={{ fontWeight: 700, color: 'var(--kd-success)' }}>18.0%</td>
                                 </tr>
                                 <tr>
                                     <td style={{ fontWeight: 600 }}>Dakar Logistics Infra Fund</td>
-                                    <td style={{ fontFamily: 'monospace' }}>500K $</td>
-                                    <td style={{ fontFamily: 'monospace', color: 'var(--kd-success)' }}>680K $</td>
+                                    <td style={{ fontFamily: 'monospace' }}>500K FCFA</td>
+                                    <td style={{ fontFamily: 'monospace', color: 'var(--kd-success)' }}>680K FCFA</td>
                                     <td style={{ fontWeight: 700, color: 'var(--kd-success)' }}>12.4%</td>
                                 </tr>
                             </tbody>
@@ -188,8 +188,8 @@ export default function AlternativeInvestments() {
                                 <div style={{ fontSize: 11, color: '#ef4444', marginTop: 4 }}>Date limite: 28 Février 2026 (dans 6 jours)</div>
                             </div>
                             <div style={{ textAlign: 'right' }}>
-                                <div style={{ fontSize: 24, fontWeight: 900, fontFamily: 'monospace', color: '#f59e0b' }}>$75,000</div>
-                                <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>Solde restant à appeler après : $100,000</div>
+                                <div style={{ fontSize: 24, fontWeight: 900, fontFamily: 'monospace', color: '#f59e0b' }}>7 FCFA5,000</div>
+                                <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>Solde restant à appeler après : 1 FCFA00,000</div>
                             </div>
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 'var(--space-3)' }}>

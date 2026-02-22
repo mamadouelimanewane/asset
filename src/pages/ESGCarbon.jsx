@@ -49,7 +49,7 @@ export default function ESGCarbon() {
                 <div className="stat-card" style={{ borderLeft: '4px solid #c87941' }}>
                     <div className="stat-icon"><CloudLightning size={20} color="#c87941" /></div>
                     <div className="stat-value">25.4</div>
-                    <div className="stat-label">Empreinte CO2 (tCO2e / M$)</div>
+                    <div className="stat-label">Empreinte CO2 (tCO2e / M FCFA)</div>
                 </div>
                 <div className="stat-card" style={{ borderLeft: '4px solid #8b5cf6' }}>
                     <div className="stat-icon"><Target size={20} color="#8b5cf6" /></div>
@@ -152,21 +152,21 @@ export default function ESGCarbon() {
                                 <td style={{ fontWeight: 600 }}>Cuisines Améliorées (Foyers)</td>
                                 <td>🇸🇳 Sénégal</td>
                                 <td>Efficacité Énergétique</td>
-                                <td style={{ fontWeight: 800, color: 'var(--kd-success)', fontFamily: 'monospace' }}>$12.50</td>
+                                <td style={{ fontWeight: 800, color: 'var(--kd-success)', fontFamily: 'monospace' }}>1 FCFA2.50</td>
                                 <td><button className="btn btn-primary btn-sm" style={{ background: '#10b981' }}>Compenser</button></td>
                             </tr>
                             <tr>
                                 <td style={{ fontWeight: 600 }}>Reforestation Mangrove du Sine Saloum</td>
                                 <td>🇸🇳 Sénégal</td>
                                 <td>Séquestration Biologique</td>
-                                <td style={{ fontWeight: 800, color: 'var(--kd-success)', fontFamily: 'monospace' }}>$24.00</td>
+                                <td style={{ fontWeight: 800, color: 'var(--kd-success)', fontFamily: 'monospace' }}>2 FCFA4.00</td>
                                 <td><button className="btn btn-primary btn-sm" style={{ background: '#10b981' }}>Compenser</button></td>
                             </tr>
                             <tr>
                                 <td style={{ fontWeight: 600 }}>Centrale Solaire Zagtouli</td>
                                 <td>🇧🇫 Burkina Faso</td>
                                 <td>Énergie Renouvelable</td>
-                                <td style={{ fontWeight: 800, color: 'var(--kd-success)', fontFamily: 'monospace' }}>$8.20</td>
+                                <td style={{ fontWeight: 800, color: 'var(--kd-success)', fontFamily: 'monospace' }}>8.20 FCFA</td>
                                 <td><button className="btn btn-primary btn-sm" style={{ background: '#10b981' }}>Compenser</button></td>
                             </tr>
                         </tbody>

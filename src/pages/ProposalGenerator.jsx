@@ -211,7 +211,7 @@ export default function ProposalGenerator() {
                                 ['Email', 'a.diallo@clinique.sn'],
                                 ['Téléphone', '+221 77 890 1234'],
                                 ['Courtier actuel', 'TD Ameritrade'],
-                                ['AUM actuel', '4 200 000 $'],
+                                ['AUM actuel', '4 200 000 FCFA'],
                                 ['Frais actuels (%)', '1.25'],
                             ].map(([label, value]) => (
                                 <div key={label}>
@@ -355,7 +355,7 @@ export default function ProposalGenerator() {
                                     <div className="grid-2" style={{ gap: 'var(--space-3)' }}>
                                         {[
                                             ['Frais de gestion', `${previewProposal.proposedFees}%`, null],
-                                            ['Commissions de trading', '0 $', 'Zéro commission'],
+                                            ['Commissions de trading', '0 FCFA', 'Zéro commission'],
                                             ['Rendement projeté', `${previewProposal.projectedReturn}%`, null],
                                             ['Cash haut rendement', '4,85% APY', 'Inclus'],
                                         ].map(([label, value, badge]) => (
@@ -391,8 +391,8 @@ export default function ProposalGenerator() {
                                         </tr>
                                         <tr>
                                             <td>Commissions</td>
-                                            <td style={{ color: 'var(--kd-danger)' }}>4,95 $ / ordre</td>
-                                            <td style={{ color: 'var(--kd-success)', fontWeight: 700 }}>0 $</td>
+                                            <td style={{ color: 'var(--kd-danger)' }}>4,95 FCFA / ordre</td>
+                                            <td style={{ color: 'var(--kd-success)', fontWeight: 700 }}>0 FCFA</td>
                                             <td style={{ color: 'var(--kd-success)', fontWeight: 700 }}>-100%</td>
                                         </tr>
                                         <tr>

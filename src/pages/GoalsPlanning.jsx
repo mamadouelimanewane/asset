@@ -31,7 +31,7 @@ const mockGoals = [
             { amount: 3_000_000, reached: false, date: null },
             { amount: 4_000_000, reached: false, date: null },
         ],
-        aiAdvice: 'Avec votre rythme actuel, vous atteindrez votre objectif avec 87% de probabilité. Pour atteindre 95%, augmentez les versements mensuels de 800 $ (5 000 → 5 800 $).',
+        aiAdvice: 'Avec votre rythme actuel, vous atteindrez votre objectif avec 87% de probabilité. Pour atteindre 95%, augmentez les versements mensuels de 800 FCFA (5 000 → 5 800 FCFA).',
     },
     {
         id: 'G002', clientName: 'Ousmane N\'Diaye', type: 'education',
@@ -44,7 +44,7 @@ const mockGoals = [
             { amount: 200_000, reached: false, date: null },
             { amount: 300_000, reached: false, date: null },
         ],
-        aiAdvice: '⚠️ Confiance à 62% seulement. Le délai est court (2,5 ans). Recommandation : augmenter à 4 200 $/mois OU envisager une bourse partielle pour réduire l\'objectif à 200K $.',
+        aiAdvice: '⚠️ Confiance à 62% seulement. Le délai est court (2,5 ans). Recommandation : augmenter à 4 200 FCFA/mois OU envisager une bourse partielle pour réduire l\'objectif à 200K FCFA.',
     },
     {
         id: 'G003', clientName: 'Aminata Sow', type: 'house',
@@ -56,7 +56,7 @@ const mockGoals = [
             { amount: 250_000, reached: false, date: null },
             { amount: 500_000, reached: false, date: null },
         ],
-        aiAdvice: 'Confiance à 55%. Deux options : (1) allonger l\'horizon à 2030 (+18 mois) pour atteindre 78% de confiance, ou (2) augmenter les versements à 4 500 $/mois.',
+        aiAdvice: 'Confiance à 55%. Deux options : (1) allonger l\'horizon à 2030 (+18 mois) pour atteindre 78% de confiance, ou (2) augmenter les versements à 4 500 FCFA/mois.',
     },
     {
         id: 'G004', clientName: 'Cheikh K. Ba', type: 'retirement',
@@ -82,7 +82,7 @@ const mockGoals = [
             { amount: 100_000, reached: false, date: null },
             { amount: 200_000, reached: false, date: null },
         ],
-        aiAdvice: 'Omar n\'a que 10 ans, vous avez du temps. À 800 $/mois avec un rendement de 6,5%, vous atteindrez 196K $ — très proche de l\'objectif. Augmenter à 850 $ garantirait le succès.',
+        aiAdvice: 'Omar n\'a que 10 ans, vous avez du temps. À 800 FCFA/mois avec un rendement de 6,5%, vous atteindrez 196K FCFA — très proche de l\'objectif. Augmenter à 850 FCFA garantirait le succès.',
     },
     {
         id: 'G006', clientName: 'Aminata Sow', type: 'travel',
@@ -121,9 +121,9 @@ function ConfidenceGauge({ score, size = 120 }) {
     return (
         <div style={{ position: 'relative', width: size, height: size / 2 + 20, margin: '0 auto' }}>
             <svg width={size} height={size / 2 + 10} style={{ overflow: 'visible' }}>
-                <path d={`M 8 ${size / 2} A ${radius} ${radius} 0 0 1 ${size - 8} ${size / 2}`}
+                <path d={`M 8 FCFA{size / 2} A ${radius} ${radius} 0 0 1 FCFA{size - 8} ${size / 2}`}
                     fill="none" stroke="var(--bg-tertiary)" strokeWidth={8} strokeLinecap="round" />
-                <path d={`M 8 ${size / 2} A ${radius} ${radius} 0 0 1 ${size - 8} ${size / 2}`}
+                <path d={`M 8 FCFA{size / 2} A ${radius} ${radius} 0 0 1 FCFA{size - 8} ${size / 2}`}
                     fill="none" stroke={color} strokeWidth={8} strokeLinecap="round"
                     strokeDasharray={circumference} strokeDashoffset={offset}
                     style={{ transition: 'stroke-dashoffset 1s ease' }} />

@@ -46,7 +46,7 @@ export default function MultiCurrency() {
             <div className="stat-grid" style={{ marginBottom: 'var(--space-5)' }}>
                 <div className="stat-card" style={{ borderLeft: '4px solid #3b82f6', background: 'rgba(59,130,246,0.05)' }}>
                     <div className="stat-icon" style={{ color: '#60a5fa' }}><Banknote size={20} /></div>
-                    <div className="stat-value" style={{ color: '#bfdbfe' }}>111.5M $</div>
+                    <div className="stat-value" style={{ color: '#bfdbfe' }}>111.5M FCFA</div>
                     <div className="stat-label">Valeur Consolidée (Equiv. USD)</div>
                 </div>
                 <div className="stat-card" style={{ borderLeft: '4px solid #ef4444' }}>
@@ -56,7 +56,7 @@ export default function MultiCurrency() {
                 </div>
                 <div className="stat-card" style={{ borderLeft: '4px solid #8b5cf6' }}>
                     <div className="stat-icon"><Activity size={20} color="#8b5cf6" /></div>
-                    <div className="stat-value">-1.4M $</div>
+                    <div className="stat-value">-1.4M FCFA</div>
                     <div className="stat-label">Impact PnL dû au Change (M-1)</div>
                 </div>
             </div>

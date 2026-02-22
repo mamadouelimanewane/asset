@@ -86,7 +86,7 @@ function ChartAUM() {
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" />
                     <XAxis dataKey="month" stroke="var(--text-muted)" fontSize={10} />
                     <YAxis stroke="var(--text-muted)" fontSize={10} tickFormatter={v => `${v}M`} />
-                    <Tooltip contentStyle={{ background: 'var(--bg-elevated)', border: '1px solid var(--border-secondary)', borderRadius: 8, fontSize: 11 }} formatter={v => `${v}M $`} />
+                    <Tooltip contentStyle={{ background: 'var(--bg-elevated)', border: '1px solid var(--border-secondary)', borderRadius: 8, fontSize: 11 }} formatter={v => `${v}M FCFA`} />
                     <Area type="monotone" dataKey="aum" name="AUM" stroke="#C87941" strokeWidth={2} fill="url(#cdAumG)" />
                 </AreaChart>
             </ResponsiveContainer>

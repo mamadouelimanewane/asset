@@ -111,7 +111,7 @@ export default function HighYieldCash() {
             {/* Avantages */}
             <div className="grid-4" style={{ marginTop: 'var(--space-5)' }}>
                 {[
-                    { icon: '🏦', title: 'Garanti FDIC', desc: 'Jusqu\'à 3M $ individuel, 6M $ conjoint' },
+                    { icon: '🏦', title: 'Garanti FDIC', desc: 'Jusqu\'à 3M FCFA individuel, 6M FCFA conjoint' },
                     { icon: '⚡', title: 'Transferts instantanés', desc: 'Déplacez la trésorerie en temps réel' },
                     { icon: '📊', title: 'Sans minimum', desc: 'Commencez avec n\'importe quel montant' },
                     { icon: '🔐', title: 'Plateforme sécurisée', desc: 'Sécurité de niveau bancaire' },
