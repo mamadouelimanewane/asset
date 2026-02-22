@@ -154,12 +154,12 @@ export const cashAccounts = [
 export const recentActivity = [
   { id: "A001", type: "trade", description: "Rééquilibrage exécuté pour Ousmane N'Diaye — 150 parts AAPL achetées", time: "Il y a 2 heures", icon: "📈" },
   { id: "A002", type: "onboard", description: "Nouveau compte ouvert : Mariama Tall — Courtage individuel", time: "Il y a 4 heures", icon: "👤" },
-  { id: "A003", type: "transfer", description: "Transfert ACAT terminé : Ibrahima Fall depuis Fidelity", time: "Il y a 6 heures", icon: "🔄" },
-  { id: "A004", type: "billing", description: "Factures T1 générées pour 142 ménages — 458 250 $ au total", time: "Il y a 1 jour", icon: "💵" },
-  { id: "A005", type: "tax", description: "Récolte de pertes exécutée : 12 340 $ de pertes captées pour Ousmane N'Diaye", time: "Il y a 1 jour", icon: "🏷️" },
+  { id: "A003", type: "transfer", description: "Transfert ACAT terminé : Ibrahima Fall", time: "Il y a 6 heures", icon: "🔄" },
+  { id: "A004", type: "billing", description: "Factures T1 générées pour 142 ménages — 458 250 FCFA au total", time: "Il y a 1 jour", icon: "💵" },
+  { id: "A005", type: "tax", description: "Récolte de pertes exécutée : 12 340 FCFA de pertes captées pour Ousmane N'Diaye", time: "Il y a 1 jour", icon: "🏷️" },
   { id: "A006", type: "report", description: "Rapports de performance générés et envoyés à 45 clients", time: "Il y a 2 jours", icon: "📄" },
   { id: "A007", type: "ai", description: "Diambar AI alerte : 3 portefeuilles ont dérivé au-delà du seuil de 5%", time: "Il y a 2 jours", icon: "🤖" },
-  { id: "A008", type: "cash", description: "Dépôt cash haut rendement : 250 000 $ de Fondation Modou Gueye", time: "Il y a 3 jours", icon: "💰" },
+  { id: "A008", type: "cash", description: "Dépôt cash haut rendement : 250 000 FCFA de Fondation Modou Gueye", time: "Il y a 3 jours", icon: "💰" },
 ];
 
 export const aiConversations = [
