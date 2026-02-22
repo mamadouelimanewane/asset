@@ -1,17 +1,20 @@
 // Formatage devises & nombres
 export const formatCurrency = (amount, compact = false) => {
     if (compact && Math.abs(amount) >= 1_000_000) {
-        return `${(amount / 1_000_000).toFixed(1)}M $`;
+        return `${(amount / 1_000_000).toFixed(1)}M FCFA`;
     }
     if (compact && Math.abs(amount) >= 1_000) {
-        return `${(amount / 1_000).toFixed(0)}K $`;
+        return `${(amount / 1_000).toFixed(0)}K FCFA`;
     }
-    return new Intl.NumberFormat('fr-FR', {
+    const formatted = new Intl.NumberFormat('fr-FR', {
         style: 'currency',
-        currency: 'USD',
+        currency: 'XOF',
         minimumFractionDigits: 0,
         maximumFractionDigits: 0,
     }).format(amount);
+
+    // Remplacer F CFA par FCFA pour la consistance s'il y a lieu
+    return formatted.replace('F\u202FCFA', 'FCFA').replace('XOF', 'FCFA');
 };
 
 export const formatPercent = (value) => {
@@ -90,10 +93,10 @@ export const getRiskColor = (risk) => {
 
 // AUM abrégé
 export const abbreviateAUM = (amount) => {
-    if (amount >= 1_000_000_000) return `${(amount / 1_000_000_000).toFixed(2)}Md $`;
-    if (amount >= 1_000_000) return `${(amount / 1_000_000).toFixed(1)}M $`;
-    if (amount >= 1_000) return `${(amount / 1_000).toFixed(0)}K $`;
-    return `${amount} $`;
+    if (amount >= 1_000_000_000) return `${(amount / 1_000_000_000).toFixed(2)}Md FCFA`;
+    if (amount >= 1_000_000) return `${(amount / 1_000_000).toFixed(1)}M FCFA`;
+    if (amount >= 1_000) return `${(amount / 1_000).toFixed(0)}K FCFA`;
+    return `${amount} FCFA`;
 };
 
 // Générer les initiales
