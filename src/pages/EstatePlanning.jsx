@@ -1,184 +1,167 @@
 import { useState } from 'react';
 import {
-    Users, ShieldCheck, FileText, Landmark, Key,
-    Network, ArrowRight, GitBranch, Binary, Lock
+    GitBranch, Users, ShieldAlert, FileText, Calculator,
+    Home, Building, Landmark, Percent, ArrowRight
 } from 'lucide-react';
-import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from 'recharts';
 import { formatCurrency } from '../utils/helpers';
 
-const SUCCESSION_DATA = [
-    { name: 'Scénario Standard (Droit Commun)', impot: 12500000, net: 42500000 },
-    { name: 'Démembrement (Usufruit)', impot: 4500000, net: 50500000 },
-    { name: 'Holding Familiale (Dutreil/UEMOA)', impot: 1200000, net: 53800000 },
+const HEIRS = [
+    { id: 'H1', name: 'Moussa Ndiaye', relation: 'Conjoint(e)', share: 50, taxRate: 5, age: 62 },
+    { id: 'H2', name: 'Aminata Ndiaye', relation: 'Enfant', share: 25, taxRate: 15, age: 34 },
+    { id: 'H3', name: 'Ibrahima Ndiaye', relation: 'Enfant', share: 25, taxRate: 15, age: 29 },
 ];
 
-const VAULT_DOCS = [
-    { name: 'Mandat de Protection Future - Modou', type: 'Contrat Intelligent', status: 'Haché sur Blockchain', date: '12 Jan 2026', size: '12 KB (Hash)' },
-    { name: 'Statuts Holding Patrimoniale SC', type: 'Juridique', status: 'Vérifié', date: '04 Fév 2025', size: '2.4 MB' },
-    { name: 'Testament Authentique (Copie Numérique)', type: 'Notarié', status: 'Crypté (AES-256)', date: '18 Nov 2024', size: '1.8 MB' },
+const ASSETS = [
+    { name: 'Immobilier', value: 2500000000, color: '#3b82f6' },
+    { name: 'Liquidités', value: 800000000, color: '#10b981' },
+    { name: 'Parts Entreprise', value: 4200000000, color: '#f59e0b' },
+    { name: 'Actifs Alternatifs', value: 1500000000, color: '#8b5cf6' },
 ];
 
 export default function EstatePlanning() {
-    const [activeTab, setActiveTab] = useState('tree');
+    const [activeTab, setActiveTab] = useState('overview');
+    const totalAssets = ASSETS.reduce((sum, item) => sum + item.value, 0);
+    const estimatedTax = totalAssets * 0.18; // 18% moyenne simulée
 
     return (
         <div className="page-content">
             <div className="page-header">
                 <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)' }}>
-                    <div style={{ width: 44, height: 44, borderRadius: '50%', background: 'linear-gradient(135deg, #1e293b, #0f172a)', border: '1px solid #c87941', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22, color: 'white' }}>
-                        <Landmark size={22} color="#c87941" />
+                    <div style={{ width: 44, height: 44, borderRadius: '50%', background: 'linear-gradient(135deg, #4c1d95, #312e81)', border: '1px solid #8b5cf6', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22, color: 'white', boxShadow: '0 0 20px rgba(139,92,246,0.3)' }}>
+                        <GitBranch size={22} color="#c4b5fd" />
                     </div>
                     <div>
-                        <h1 style={{ marginBottom: 0 }}>Planification Successorale & Family Office</h1>
-                        <p style={{ marginBottom: 0 }}>Structuration transgénérationnelle, Fiscalité et Coffre-fort numérique</p>
+                        <h1 style={{ marginBottom: 0 }}>Planification Successorale & Estate</h1>
+                        <p style={{ marginBottom: 0 }}>Simulation des droits de mutation, démembrement et optimisation de la transmission.</p>
                     </div>
                 </div>
                 <div className="btn-group">
-                    <button className="btn btn-secondary"><Users size={14} style={{ marginRight: 6 }} /> Inviter Membre de la Famille</button>
-                    <button className="btn btn-primary"><ShieldCheck size={14} style={{ marginRight: 6 }} /> Activer Protection Legale</button>
+                    <button className="btn btn-secondary" style={{ border: '1px solid #8b5cf6', color: '#c4b5fd' }}><FileText size={14} style={{ marginRight: 6 }} /> Éditer Testament</button>
+                    <button className="btn btn-primary" style={{ background: '#8b5cf6', border: 'none' }}><Calculator size={14} style={{ marginRight: 6 }} /> Simuler SCI/Holding</button>
                 </div>
             </div>
 
             <div className="stat-grid" style={{ marginBottom: 'var(--space-5)' }}>
-                <div className="stat-card" style={{ borderLeft: '4px solid var(--kd-copper)' }}>
-                    <div className="stat-icon"><Landmark size={20} /></div>
-                    <div className="stat-value">55M FCFA</div>
-                    <div className="stat-label">Patrimoine Familial Consolidé</div>
+                <div className="stat-card" style={{ borderLeft: '4px solid #3b82f6', background: 'rgba(59,130,246,0.05)' }}>
+                    <div className="stat-icon" style={{ color: '#93c5fd' }}><Landmark size={20} /></div>
+                    <div className="stat-value" style={{ color: '#bfdbfe' }}>{formatCurrency(totalAssets, true)}</div>
+                    <div className="stat-label">Masse Successorale Nette</div>
                 </div>
-                <div className="stat-card" style={{ borderLeft: '4px solid #8b5cf6' }}>
-                    <div className="stat-icon"><Network size={20} color="#8b5cf6" /></div>
-                    <div className="stat-value">3</div>
-                    <div className="stat-label">Générations Impliquées</div>
+                <div className="stat-card" style={{ borderLeft: '4px solid #ef4444' }}>
+                    <div className="stat-icon"><ShieldAlert size={20} color="#ef4444" /></div>
+                    <div className="stat-value" style={{ color: '#fca5a5' }}>{formatCurrency(estimatedTax, true)}</div>
+                    <div className="stat-label">Droits de Succession Estimés (Pire Cas)</div>
                 </div>
                 <div className="stat-card" style={{ borderLeft: '4px solid #10b981' }}>
-                    <div className="stat-icon"><ShieldCheck size={20} color="#10b981" /></div>
-                    <div className="stat-value">82%</div>
-                    <div className="stat-label">Taux d'Optimisation Fiscale</div>
+                    <div className="stat-icon"><Percent size={20} color="#10b981" /></div>
+                    <div className="stat-value" style={{ color: '#a7f3d0' }}>- 45%</div>
+                    <div className="stat-label">Économie Potentielle via Démembrement</div>
                 </div>
             </div>
 
             <div className="tabs" style={{ marginBottom: 'var(--space-4)' }}>
-                {[['tree', '🌳 Arbre Patrimonial'], ['fiscal', '⚖️ Simulateur Fiscal'], ['vault', '🔐 Coffre-fort Blockchain']].map(([key, label]) => (
+                {[['overview', '🌳 Arbre & Quotités'], ['optimization', '⚙️ Stratégies d\'Optimisation'], ['documents', '📁 Actes Notariés']].map(([key, label]) => (
                     <button key={key} className={`tab ${activeTab === key ? 'active' : ''}`} onClick={() => setActiveTab(key)}>{label}</button>
                 ))}
             </div>
 
-            {activeTab === 'tree' && (
-                <div className="card" style={{ minHeight: 400, background: 'var(--bg-tertiary)', position: 'relative', overflow: 'hidden' }}>
-                    <div className="card-header" style={{ marginBottom: 'var(--space-4)' }}>
-                        <h3>Topologie Structuration (Groupe Familial)</h3>
-                        <span className="badge badge-copper">Vue détaillée</span>
-                    </div>
-
-                    {/* Visualisation simplifiée de l'arbre */}
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'var(--space-4)' }}>
-                        {/* Parent */}
-                        <div style={{ padding: 'var(--space-3)', width: 250, background: 'linear-gradient(180deg, var(--kd-copper-dark), var(--bg-elevated))', border: '1px solid var(--kd-copper)', borderRadius: 'var(--radius-md)', textAlign: 'center' }}>
-                            <div style={{ fontWeight: 800, fontSize: 16 }}>Modou Gueye (Patriarche)</div>
-                            <div style={{ fontSize: 12, color: 'var(--text-secondary)' }}>Usufruitier • 100% Droits de vote</div>
-                            <div style={{ fontSize: 14, fontWeight: 700, color: 'white', marginTop: 8 }}>Valorisation: 45M FCFA</div>
-                        </div>
-
-                        <div style={{ height: 40, width: 2, background: 'var(--kd-copper-light)' }}></div>
-
-                        {/* Holding */}
-                        <div style={{ padding: 'var(--space-3)', width: 350, background: 'var(--bg-elevated)', border: '1px solid #8b5cf6', borderRadius: 'var(--radius-md)', textAlign: 'center' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, color: '#8b5cf6', marginBottom: 4 }}>
-                                <Landmark size={16} /> <span style={{ fontWeight: 800, fontSize: 14 }}>HOLDING "GUEYE INVEST" (SC)</span>
-                            </div>
-                            <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>Démembrement de propriété actif</div>
-                        </div>
-
-                        <div style={{ display: 'flex', gap: 150, marginTop: 20, position: 'relative' }}>
-                            <div style={{ position: 'absolute', top: -20, left: 100, right: 100, height: 2, background: 'var(--border-primary)' }}></div>
-                            {/* Enfant 1 */}
-                            <div style={{ position: 'relative', padding: 'var(--space-3)', width: 200, background: 'var(--bg-elevated)', border: '1px solid var(--border-primary)', borderRadius: 'var(--radius-md)', textAlign: 'center' }}>
-                                <div style={{ position: 'absolute', top: -20, left: '50%', width: 2, height: 20, background: 'var(--border-primary)' }}></div>
-                                <div style={{ fontWeight: 700, fontSize: 14 }}>Aïssatou Gueye (Fille)</div>
-                                <div style={{ fontSize: 11, color: 'var(--text-secondary)' }}>Nue-propriétaire (50%)</div>
-                                <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--kd-success)', marginTop: 8 }}>Avenir: +22M FCFA</div>
-                            </div>
-                            {/* Enfant 2 */}
-                            <div style={{ position: 'relative', padding: 'var(--space-3)', width: 200, background: 'var(--bg-elevated)', border: '1px solid var(--border-primary)', borderRadius: 'var(--radius-md)', textAlign: 'center' }}>
-                                <div style={{ position: 'absolute', top: -20, left: '50%', width: 2, height: 20, background: 'var(--border-primary)' }}></div>
-                                <div style={{ fontWeight: 700, fontSize: 14 }}>Cheikh Gueye (Fils)</div>
-                                <div style={{ fontSize: 11, color: 'var(--text-secondary)' }}>Nue-propriétaire (50%)</div>
-                                <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--kd-success)', marginTop: 8 }}>Avenir: +22M FCFA</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
-
-            {activeTab === 'fiscal' && (
-                <div className="grid-2">
+            {activeTab === 'overview' && (
+                <div className="grid-2-1">
                     <div className="card">
-                        <div className="card-header">
-                            <h3>Impact Fiscal : Transmission d'un portefeuille de 55M FCFA</h3>
+                        <div className="card-header" style={{ marginBottom: 'var(--space-3)' }}>
+                            <h3 style={{ display: 'flex', alignItems: 'center', gap: 8 }}><Users size={18} /> Bénéficiaires et Héritiers Réservataires</h3>
                         </div>
-                        <div style={{ height: 300, marginTop: 'var(--space-4)' }}>
-                            <ResponsiveContainer width="100%" height="100%">
-                                <BarChart data={SUCCESSION_DATA} layout="vertical" margin={{ top: 0, right: 0, left: 40, bottom: 0 }}>
-                                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" horizontal={false} />
-                                    <XAxis type="number" stroke="var(--text-muted)" fontSize={11} tickFormatter={(v) => `${v / 1000000}M`} />
-                                    <YAxis type="category" dataKey="name" stroke="var(--text-muted)" fontSize={11} width={120} />
-                                    <Tooltip cursor={{ fill: 'rgba(255,255,255,0.02)' }} contentStyle={{ background: '#0f172a', border: '1px solid var(--border-secondary)' }} />
-                                    <Legend wrapperStyle={{ fontSize: 12, paddingTop: 10 }} />
-                                    <Bar dataKey="impot" name="Droits de succession / Impôts" stackId="a" fill="#EF4444" radius={[0, 0, 0, 0]} barSize={24} />
-                                    <Bar dataKey="net" name="Capital Net Transmis" stackId="a" fill="#10B981" radius={[0, 4, 4, 0]} />
-                                </BarChart>
-                            </ResponsiveContainer>
-                        </div>
-                        <div style={{ marginTop: 'var(--space-4)', padding: 'var(--space-3)', background: 'rgba(16, 185, 129, 0.1)', border: '1px dashed rgba(16, 185, 129, 0.3)', borderRadius: 'var(--radius-md)' }}>
-                            <span style={{ fontWeight: 700, color: '#10B981', display: 'flex', alignItems: 'center', gap: 8 }}><ShieldCheck size={16} /> Recommandation Stratégique</span>
-                            <p style={{ margin: '8px 0 0 0', fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.5 }}>L'utilisation combinée d'une Holding Structurante (Pacte d'actionnaires) et d'une donation en démembrement de propriété permet d'économiser près de <strong>11.3M FCFA</strong> en droits de mutation par rapport au régime de droit commun (Sénégal/Côte d'Ivoire).</p>
-                        </div>
-                    </div>
-                </div>
-            )}
-
-            {activeTab === 'vault' && (
-                <div className="card" style={{ border: '1px solid rgba(139, 92, 246, 0.3)' }}>
-                    <div className="card-header" style={{ borderBottom: '1px solid var(--border-primary)', paddingBottom: 'var(--space-3)' }}>
-                        <h3 style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#A78BFA' }}><Lock size={18} /> Digital Vault (Web3 / Blockchain Secured)</h3>
-                        <button className="btn btn-primary btn-sm" style={{ background: '#8b5cf6' }}>+ Uploader Document Confidentiel</button>
-                    </div>
-
-                    <p style={{ fontSize: 13, color: 'var(--text-secondary)', margin: 'var(--space-3) 0' }}>
-                        Vos documents testamentaires et pactes d'associés sont hachés cryptographiquement. Leur empreinte (SHA-256) est ancrée sur la blockchain Ethereum, garantissant qu'ils n'ont subi aucune altération depuis leur dépôt, avec des droits d'accès uniquement configurables via Multi-Sig.
-                    </p>
-
-                    <div style={{ overflowX: 'auto' }}>
                         <table className="data-table">
                             <thead>
                                 <tr>
-                                    <th>Document Intitulé</th>
-                                    <th>Nature Juridique</th>
-                                    <th>Certification (Status)</th>
-                                    <th>Poids / Empreinte</th>
-                                    <th>Date d'ancrage</th>
-                                    <th>Action</th>
+                                    <th>Nom</th>
+                                    <th>Lien de Parenté</th>
+                                    <th>Quote-part légale</th>
+                                    <th>Valeur Estimée</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {VAULT_DOCS.map((doc, i) => (
-                                    <tr key={i}>
-                                        <td style={{ fontWeight: 600, color: 'white' }}>{doc.name}</td>
-                                        <td>{doc.type}</td>
+                                {HEIRS.map(heir => (
+                                    <tr key={heir.id}>
+                                        <td style={{ fontWeight: 800 }}>{heir.name} <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>{heir.age} ans</div></td>
+                                        <td><span className="badge badge-info">{heir.relation}</span></td>
                                         <td>
-                                            <span style={{ fontSize: 11, padding: '4px 8px', borderRadius: 4, background: doc.status.includes('Blockchain') ? 'rgba(139, 92, 246, 0.1)' : 'rgba(16, 185, 129, 0.1)', color: doc.status.includes('Blockchain') ? '#A78BFA' : '#10B981', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: 4 }}>
-                                                {doc.status.includes('Blockchain') ? <Binary size={12} /> : <ShieldCheck size={12} />} {doc.status}
-                                            </span>
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                                                <div style={{ flex: 1, height: 6, background: 'rgba(255,255,255,0.1)', borderRadius: 3 }}>
+                                                    <div style={{ width: `${heir.share}%`, height: '100%', background: '#8b5cf6', borderRadius: 3 }}></div>
+                                                </div>
+                                                <span style={{ fontSize: 11 }}>{heir.share}%</span>
+                                            </div>
                                         </td>
-                                        <td style={{ fontFamily: 'monospace', color: 'var(--text-muted)' }}>{doc.size}</td>
-                                        <td style={{ fontSize: 12 }}>{doc.date}</td>
-                                        <td>
-                                            <button className="btn btn-ghost btn-sm">Décrypter & Voir <ArrowRight size={14} style={{ marginLeft: 4 }} /></button>
+                                        <td style={{ fontFamily: 'monospace', fontWeight: 700, color: '#10b981' }}>
+                                            {formatCurrency(totalAssets * (heir.share / 100), true)}
                                         </td>
                                     </tr>
                                 ))}
                             </tbody>
                         </table>
+                    </div>
+
+                    <div className="card">
+                        <div className="card-header">
+                            <h3>Composition du Patrimoine</h3>
+                        </div>
+                        <div style={{ height: 250, marginTop: 'var(--space-4)' }}>
+                            <ResponsiveContainer width="100%" height="100%">
+                                <PieChart>
+                                    <Pie data={ASSETS} cx="50%" cy="50%" innerRadius={60} outerRadius={80} paddingAngle={3} dataKey="value" stroke="none">
+                                        {ASSETS.map((entry, index) => <Cell key={index} fill={entry.color} />)}
+                                    </Pie>
+                                    <Tooltip formatter={(value) => formatCurrency(value, true)} contentStyle={{ background: '#0a0e17', borderRadius: 8, border: 'none' }} />
+                                </PieChart>
+                            </ResponsiveContainer>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {activeTab === 'optimization' && (
+                <div className="card" style={{ border: '1px solid rgba(139, 92, 246, 0.4)' }}>
+                    <div className="card-header">
+                        <h3 style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#c4b5fd' }}><Calculator size={18} /> Scénarios de Transmission Assistés par IA</h3>
+                    </div>
+
+                    <div style={{ padding: 'var(--space-4)', background: 'var(--bg-tertiary)', borderRadius: 'var(--radius-md)', marginBottom: 16, borderLeft: '3px solid #10b981' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
+                            <div style={{ fontWeight: 800, fontSize: 15, display: 'flex', alignItems: 'center', gap: 8 }}>
+                                <Home size={16} color="#10b981" /> Donation-Partage avec Démembrement de Propriété
+                            </div>
+                            <span className="badge badge-success">Recommandé</span>
+                        </div>
+                        <p style={{ fontSize: 13, color: 'var(--text-secondary)' }}>
+                            Le Donateur (62 ans) donne la Nue-Propriété du parc immobilier à ses enfants, en conservant l'Usufruit (loyers).
+                            La valeur imposable de la nue-propriété est réduite à 50% selon le barème fiscal, économisant massivement sur les droits finaux.
+                        </p>
+                        <div style={{ marginTop: 16, padding: 12, background: 'rgba(0,0,0,0.2)', borderRadius: 8, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <div>
+                                <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>Droits Prévus Actuels</div>
+                                <div style={{ fontWeight: 800, color: '#ef4444' }}>~450M FCFA</div>
+                            </div>
+                            <ArrowRight size={16} color="var(--text-muted)" />
+                            <div style={{ textAlign: 'right' }}>
+                                <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>Droits Après Démembrement</div>
+                                <div style={{ fontWeight: 800, color: '#10b981', fontSize: 18 }}>~210M FCFA</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style={{ padding: 'var(--space-4)', background: 'var(--bg-tertiary)', borderRadius: 'var(--radius-md)', borderLeft: '3px solid #3b82f6' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
+                            <div style={{ fontWeight: 800, fontSize: 15, display: 'flex', alignItems: 'center', gap: 8 }}>
+                                <Building size={16} color="#3b82f6" /> Apport à une Holding (Transmission d'Entreprise)
+                            </div>
+                            <span className="badge badge-info">Action Requise</span>
+                        </div>
+                        <p style={{ fontSize: 13, color: 'var(--text-secondary)' }}>
+                            Sécurisation des parts de la société opérationnelle dans une holding familiale avec pacte Dutreil (si applicable).
+                            Cela évite le démantèlement de l'entreprise pour payer l'impôt successoral.
+                        </p>
                     </div>
                 </div>
             )}
