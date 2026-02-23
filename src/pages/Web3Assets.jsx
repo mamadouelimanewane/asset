@@ -235,10 +235,10 @@ export default function Web3Assets() {
                         <div style={{ padding: 'var(--space-4)', background: 'var(--bg-elevated)', borderRadius: 'var(--radius-md)', borderTop: '3px solid #10B981' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 16 }}>
                                 <ShieldCheck size={20} color="#10B981" />
-                                <span style={{ fontSize: 11, fontWeight: 700, color: '#10B981' }}>ACTIF</span>
+                                <div style={{ fontSize: 11, fontWeight: 700, color: '#10B981' }}>ACTIF</div>
                             </div>
-                            <div style={{ fontSize: 15, fontWeight: 700, marginBottom: 4 }}>Règle de quorum (Tx > 5 FCFA0k)</div>
-                            <div style={{ fontSize: 12, color: 'var(--text-secondary)' }}>Nécessite 3 des 5 fondateurs pour signer cryptographiquement la transaction.</div>
+                            <div style={{ fontSize: 15, fontWeight: 700, marginBottom: 4 }}>Règle de quorum (Tx &gt; 5M FCFA)</div>
+                            <div style={{ fontSize: 12, color: 'var(--text-secondary)' }}>Nécessite 3 des 5 fondateurs pour signer une transaction d'ampleur en USDC/ETH sur Mainnet.</div>
                         </div>
                         <div style={{ padding: 'var(--space-4)', background: 'var(--bg-elevated)', borderRadius: 'var(--radius-md)', borderTop: '3px solid var(--kd-copper-light)' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 16 }}>

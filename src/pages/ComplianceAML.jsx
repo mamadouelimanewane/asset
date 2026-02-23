@@ -21,9 +21,8 @@ const TX_MONITORING = [
 
 const ALERTS = [
     { id: 'AL-901', client: 'M. Sarr', type: 'Sanction Check (OFAC)', status: 'Alerte Rouge', date: 'Il y a 10 min', desc: 'Correspondance partielle avec liste SDN.' },
-    { id: 'AL-902', client: 'Groupe Kassé', type: 'Virement Inhabituel', status: 'Investigation', date: 'Hier, 14:30', desc: 'Virement sortant \u003E 50M FCFA vers juridiction offshore (Îles Vierges).' },
-    {
-        id: 'AL-903', client: 'Ami Ndiaye', type: 'KYC Expiré', status: 'Avertissement', date: 'Il y a 2 jours', desc: 'Carte d\\'identité nationale expirée.Gel des retraits imminent.' },
+    { id: 'AL-902', client: 'Groupe Kassé', type: 'Virement Inhabituel', status: 'Investigation', date: 'Hier, 14:30', desc: 'Virement sortant > 50M FCFA vers juridiction offshore (Îles Vierges).' },
+    { id: 'AL-903', client: 'Ami Ndiaye', type: 'KYC Expiré', status: 'Avertissement', date: 'Il y a 2 jours', desc: "Carte d'identité nationale expirée. Gel des retraits imminent." },
     { id: 'AL-904', client: 'Dr. Fall', type: 'Statut PEP (Politique)', status: 'Revue Annuelle', date: 'Il y a 5 jours', desc: 'Nomination récente au gouvernement. Diligence renforcée requise.' },
 ];
 

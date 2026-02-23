@@ -86,7 +86,7 @@ export default function ExecutiveDashboard() {
                     <div style={{ color: 'var(--text-secondary)', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 8 }}>Marge Opérationnelle</div>
                     <div style={{ fontSize: 32, fontWeight: 900, color: 'white', fontFamily: 'monospace' }}>42.8%</div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8, fontSize: 13, color: 'var(--kd-success)', fontWeight: 700 }}>
-                        <CheckCircle size={16} /> Objectif: >40% atteint
+                        <CheckCircle size={16} /> Objectif: &gt;40% atteint
                     </div>
                 </div>
 

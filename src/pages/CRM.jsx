@@ -229,7 +229,7 @@ export default function CRM() {
                             <div style={{ padding: 'var(--space-3)', background: 'var(--bg-elevated)', borderRadius: 'var(--radius-sm)', borderLeft: '3px solid #F59E0B' }}>
                                 <div style={{ fontSize: 13, fontWeight: 700, marginBottom: 4 }}>Deal at Risk "Groupe Seck Holdings" ⚠️</div>
                                 <div style={{ fontSize: 12, color: 'var(--text-secondary)', lineHeight: 1.5 }}>
-                                    La vélocité du deal ralentit (bloqué en Proposition depuis 14j). Le client compare probablement avec Oragroup Private. <strong>Action recommandée :</strong> Ajuster la grille de frais sur la tranche Dépôts > 1MM FCFA et renvoyer la doc ce jour.
+                                    La vélocité du deal ralentit (bloqué en Proposition depuis 14j). Le client compare probablement avec Oragroup Private. <strong>Action recommandée :</strong> Ajuster la grille de frais sur la tranche Dépôts &gt; 1MM FCFA et renvoyer la doc ce jour.
                                 </div>
                             </div>
                             <div style={{ padding: 'var(--space-3)', background: 'var(--bg-elevated)', borderRadius: 'var(--radius-sm)', borderLeft: '3px solid #3B82F6' }}>
