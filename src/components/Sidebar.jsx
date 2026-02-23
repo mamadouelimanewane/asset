@@ -34,7 +34,7 @@ const navSections = [
     {
         title: 'Aperçu',
         items: [
-            { to: '/', icon: LayoutDashboard, label: 'Tableau de bord' },
+            { to: '/dashboard', icon: LayoutDashboard, label: 'Tableau de bord' },
             { to: '/custom-dashboard', icon: Grid3X3, label: 'Dashboard perso.' },
             { to: '/executive', icon: Crown, label: 'Vue exécutive' },
         ],
@@ -114,7 +114,7 @@ export default function Sidebar({ collapsed, onToggle, mobileOpen, setMobileMenu
                             <NavLink
                                 key={item.to}
                                 to={item.to}
-                                end={item.to === '/'}
+                                end={item.to === '/dashboard' || item.to === '/'}
                                 className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
                                 onClick={() => setMobileMenuOpen && setMobileMenuOpen(false)}
                             >

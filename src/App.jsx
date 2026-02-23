@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import DiambarAI from './components/DiambarAI';
@@ -58,87 +58,103 @@ import RealEstate from './pages/RealEstate';
 import ClubDeals from './pages/ClubDeals';
 import ArtVault from './pages/ArtVault';
 import NextGen from './pages/NextGen';
+import Landing from './pages/Landing';
 import './index.css';
 
-function App() {
+function MainApp() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  if (location.pathname === '/') {
+    return (
+      <Routes>
+        <Route path="/" element={<Landing />} />
+      </Routes>
+    );
+  }
 
   return (
-    <BrowserRouter>
-      <div className="app-layout">
-        <Sidebar
-          collapsed={sidebarCollapsed}
-          onToggle={() => setSidebarCollapsed(!sidebarCollapsed)}
-          mobileOpen={mobileMenuOpen}
-          setMobileMenuOpen={setMobileMenuOpen}
-        />
+    <div className="app-layout">
+      <Sidebar
+        collapsed={sidebarCollapsed}
+        onToggle={() => setSidebarCollapsed(!sidebarCollapsed)}
+        mobileOpen={mobileMenuOpen}
+        setMobileMenuOpen={setMobileMenuOpen}
+      />
 
-        {mobileMenuOpen && (
-          <div className="mobile-overlay" onClick={() => setMobileMenuOpen(false)}></div>
-        )}
-        <main className={`app-main ${sidebarCollapsed ? 'collapsed' : ''}`}>
-          <Header onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)} />
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/clients" element={<Clients />} />
-            <Route path="/onboarding" element={<Onboarding />} />
-            <Route path="/transfers" element={<Transfers />} />
-            <Route path="/portfolio" element={<PortfolioManagement />} />
-            <Route path="/trading" element={<Trading />} />
-            <Route path="/marketplace" element={<ModelMarketplace />} />
-            <Route path="/cash" element={<HighYieldCash />} />
-            <Route path="/billing" element={<Billing />} />
-            <Route path="/reporting" element={<Reporting />} />
-            <Route path="/tax" element={<TaxManagement />} />
-            <Route path="/integrations" element={<Integrations />} />
-            <Route path="/compliance" element={<Compliance />} />
-            <Route path="/settings" element={<SettingsPage />} />
-            <Route path="/client-portal" element={<ClientPortal />} />
-            <Route path="/messaging" element={<Messaging />} />
-            <Route path="/notifications" element={<Notifications />} />
-            <Route path="/custom-dashboard" element={<CustomDashboard />} />
-            <Route path="/estate-planning" element={<EstatePlanning />} />
-            <Route path="/crm" element={<CRM />} />
-            <Route path="/scoring" element={<ClientScoring />} />
-            <Route path="/education" element={<EducationHub />} />
-            <Route path="/goals" element={<GoalsPlanning />} />
-            <Route path="/proposals" element={<ProposalGenerator />} />
-            <Route path="/alternatives" element={<AlternativeInvestments />} />
-            <Route path="/multi-currency" element={<MultiCurrency />} />
-            <Route path="/audit" element={<AuditTrail />} />
-            <Route path="/simulator" element={<PerformanceSimulator />} />
-            <Route path="/reports" element={<ReportCenter />} />
-            <Route path="/documents" element={<DocumentManager />} />
-            <Route path="/tasks" element={<TaskManager />} />
-            <Route path="/risk" element={<RiskAnalysis />} />
-            <Route path="/philanthropy" element={<Philanthropy />} />
-            <Route path="/benchmarking" element={<Benchmarking />} />
-            <Route path="/executive" element={<ExecutiveDashboard />} />
-            <Route path="/copilot" element={<DiambarCopilot />} />
-            <Route path="/behavioral" element={<BehavioralAI />} />
-            <Route path="/optimizer" element={<NeuralOptimizer />} />
-            <Route path="/african-payments" element={<AfricanPayments />} />
-            <Route path="/wealth-pocket" element={<WealthPocket />} />
-            <Route path="/web3" element={<Web3Assets />} />
-            <Route path="/market-intelligence" element={<MarketIntelligence />} />
-            <Route path="/digital-twin" element={<DigitalTwin />} />
-            <Route path="/client-experience" element={<ClientExperience />} />
-            <Route path="/security" element={<SecurityNext />} />
-            <Route path="/esg" element={<ESGCarbon />} />
-            <Route path="/admin" element={<SystemAdministration />} />
-            <Route path="/corporate-wealth" element={<CorporateWealth />} />
-            <Route path="/aml" element={<ComplianceAML />} />
-            <Route path="/legal-tax" element={<LegalTax />} />
-            <Route path="/concierge" element={<Concierge />} />
-            <Route path="/real-estate" element={<RealEstate />} />
-            <Route path="/club-deals" element={<ClubDeals />} />
-            <Route path="/art-vault" element={<ArtVault />} />
-            <Route path="/nextgen" element={<NextGen />} />
-          </Routes>
-        </main>
-        <DiambarAI />
-      </div>
+      {mobileMenuOpen && (
+        <div className="mobile-overlay" onClick={() => setMobileMenuOpen(false)}></div>
+      )}
+      <main className={`app-main ${sidebarCollapsed ? 'collapsed' : ''}`}>
+        <Header onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)} />
+        <Routes>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/clients" element={<Clients />} />
+          <Route path="/onboarding" element={<Onboarding />} />
+          <Route path="/transfers" element={<Transfers />} />
+          <Route path="/portfolio" element={<PortfolioManagement />} />
+          <Route path="/trading" element={<Trading />} />
+          <Route path="/marketplace" element={<ModelMarketplace />} />
+          <Route path="/cash" element={<HighYieldCash />} />
+          <Route path="/billing" element={<Billing />} />
+          <Route path="/reporting" element={<Reporting />} />
+          <Route path="/tax" element={<TaxManagement />} />
+          <Route path="/integrations" element={<Integrations />} />
+          <Route path="/compliance" element={<Compliance />} />
+          <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/client-portal" element={<ClientPortal />} />
+          <Route path="/messaging" element={<Messaging />} />
+          <Route path="/notifications" element={<Notifications />} />
+          <Route path="/custom-dashboard" element={<CustomDashboard />} />
+          <Route path="/estate-planning" element={<EstatePlanning />} />
+          <Route path="/crm" element={<CRM />} />
+          <Route path="/scoring" element={<ClientScoring />} />
+          <Route path="/education" element={<EducationHub />} />
+          <Route path="/goals" element={<GoalsPlanning />} />
+          <Route path="/proposals" element={<ProposalGenerator />} />
+          <Route path="/alternatives" element={<AlternativeInvestments />} />
+          <Route path="/multi-currency" element={<MultiCurrency />} />
+          <Route path="/audit" element={<AuditTrail />} />
+          <Route path="/simulator" element={<PerformanceSimulator />} />
+          <Route path="/reports" element={<ReportCenter />} />
+          <Route path="/documents" element={<DocumentManager />} />
+          <Route path="/tasks" element={<TaskManager />} />
+          <Route path="/risk" element={<RiskAnalysis />} />
+          <Route path="/philanthropy" element={<Philanthropy />} />
+          <Route path="/benchmarking" element={<Benchmarking />} />
+          <Route path="/executive" element={<ExecutiveDashboard />} />
+          <Route path="/copilot" element={<DiambarCopilot />} />
+          <Route path="/behavioral" element={<BehavioralAI />} />
+          <Route path="/optimizer" element={<NeuralOptimizer />} />
+          <Route path="/african-payments" element={<AfricanPayments />} />
+          <Route path="/wealth-pocket" element={<WealthPocket />} />
+          <Route path="/web3" element={<Web3Assets />} />
+          <Route path="/market-intelligence" element={<MarketIntelligence />} />
+          <Route path="/digital-twin" element={<DigitalTwin />} />
+          <Route path="/client-experience" element={<ClientExperience />} />
+          <Route path="/security" element={<SecurityNext />} />
+          <Route path="/esg" element={<ESGCarbon />} />
+          <Route path="/admin" element={<SystemAdministration />} />
+          <Route path="/corporate-wealth" element={<CorporateWealth />} />
+          <Route path="/aml" element={<ComplianceAML />} />
+          <Route path="/legal-tax" element={<LegalTax />} />
+          <Route path="/concierge" element={<Concierge />} />
+          <Route path="/real-estate" element={<RealEstate />} />
+          <Route path="/club-deals" element={<ClubDeals />} />
+          <Route path="/art-vault" element={<ArtVault />} />
+          <Route path="/nextgen" element={<NextGen />} />
+        </Routes>
+      </main>
+      <DiambarAI />
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <MainApp />
     </BrowserRouter>
   );
 }
