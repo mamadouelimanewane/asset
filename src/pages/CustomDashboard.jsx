@@ -32,6 +32,8 @@ const WIDGET_CATALOG = [
     { id: 'list_top_clients', title: 'Top clients par AUM', category: 'Liste', icon: Users, size: 'md', defaultOn: false },
     { id: 'kpi_tlh', title: 'Pertes TLH récoltées', category: 'KPI', icon: Calculator, size: 'sm', defaultOn: false },
     { id: 'kpi_billing', title: 'Facturation T1', category: 'KPI', icon: FileText, size: 'sm', defaultOn: false },
+    { id: 'list_capital_calls', title: 'Appels de fonds', category: 'Liste', icon: DollarSign, size: 'md', defaultOn: false },
+    { id: 'list_real_estate', title: 'Flux Locatif', category: 'Liste', icon: Building, size: 'md', defaultOn: false },
 ];
 
 const TEMPLATES = [
@@ -203,6 +205,47 @@ function ListTopClients() {
     );
 }
 
+function ListCapitalCalls() {
+    return (
+        <div>
+            {[
+                { r: 'Cité Keur Gorgui Phase 2', date: '15 Mars 2025', amt: 25000000, prog: 45 },
+                { r: 'Data Center Diamniadio', date: '30 Avr 2025', amt: 10000000, prog: 20 },
+            ].map((c, i) => (
+                <div key={i} style={{ padding: 'var(--space-3)', background: 'var(--bg-tertiary)', borderRadius: 'var(--radius-sm)', marginBottom: 'var(--space-2)' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
+                        <span style={{ fontSize: 13, fontWeight: 700 }}>{c.r}</span>
+                        <span style={{ fontSize: 13, fontWeight: 800, color: '#10b981' }}>{formatCurrency(c.amt, true)}</span>
+                    </div>
+                    <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>Date limite : {c.date} (Progrès : {c.prog}%)</div>
+                </div>
+            ))}
+        </div>
+    );
+}
+
+function ListRealEstate() {
+    return (
+        <div>
+            {[
+                { p: 'Villa Almadies', type: 'Location', l: 'M. Touré', rent: 1500000, status: 'Payé' },
+                { p: 'Appt Plateau D12', type: 'Location', l: 'Orange SN', rent: 850000, status: 'Retard' },
+            ].map((r, i) => (
+                <div key={i} style={{ padding: 'var(--space-2) 0', borderBottom: '1px solid var(--border-primary)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <div>
+                        <div style={{ fontSize: 12, fontWeight: 600 }}>{r.p}</div>
+                        <div style={{ fontSize: 10, color: 'var(--text-muted)' }}>Locataire: {r.l}</div>
+                    </div>
+                    <div style={{ textAlign: 'right' }}>
+                        <div style={{ fontSize: 13, color: 'var(--kd-copper-light)', fontWeight: 700 }}>{formatCurrency(r.rent)}/m</div>
+                        <div className={`badge badge-${r.status === 'Payé' ? 'success' : 'danger'}`} style={{ fontSize: 9 }}>{r.status}</div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
+}
+
 const WIDGET_RENDERERS = {
     kpi_aum: (id) => <KPIWidget widgetId={id} />,
     kpi_clients: (id) => <KPIWidget widgetId={id} />,
@@ -219,6 +262,8 @@ const WIDGET_RENDERERS = {
     list_trades: () => <ListTrades />,
     list_alerts: () => <ListAlerts />,
     list_top_clients: () => <ListTopClients />,
+    list_capital_calls: () => <ListCapitalCalls />,
+    list_real_estate: () => <ListRealEstate />,
 };
 
 /* ── Composant principal ── */

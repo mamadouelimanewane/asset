@@ -172,7 +172,7 @@ export default function NeuralOptimizer() {
                                 </tr>
                                 <tr>
                                     <td style={{ fontWeight: 600 }}>Cash & Eq.</td><td>16.0%</td><td style={{ fontWeight: 800, color: '#ef4444' }}>10.0%</td><td><span className="badge badge-red">-6.0%</span></td>
-                                    <td style={{ color: 'var(--text-secondary)' }}>Retrait USDC (1 FCFA2k)</td>
+                                    <td style={{ color: 'var(--text-secondary)' }}>Retrait USDC ($12k)</td>
                                 </tr>
                                 <tr>
                                     <td style={{ fontWeight: 600 }}>Alternatifs (RWA)</td><td>8.0%</td><td style={{ fontWeight: 800, color: '#10b981' }}>12.5%</td><td><span className="badge badge-green">+4.5%</span></td>
