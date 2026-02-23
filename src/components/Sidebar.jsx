@@ -5,7 +5,8 @@ import {
     Settings, ChevronsLeft, ChevronsRight, Zap, Shield, HelpCircle, MessageCircle, Bell,
     Grid3X3, GitBranch, Target, Award, BookOpen, Gem, Globe, Eye, Sliders, BarChart3,
     FolderOpen, CheckSquare, AlertTriangle, Heart, Trophy, Crown,
-    Sparkles, Brain, Cpu, Smartphone, Database, ShieldAlert, Palmtree, Building2, MapPin
+    Sparkles, Brain, Cpu, Smartphone, Database, ShieldAlert, Palmtree, Building2, MapPin,
+    Building, Network, Palette, GraduationCap
 } from 'lucide-react';
 
 
@@ -15,6 +16,8 @@ const navSections = [
         items: [
             { to: '/concierge', icon: Palmtree, label: 'Conciergerie & CBI' },
             { to: '/corporate-wealth', icon: Building2, label: 'Holding & ESOP' },
+            { to: '/club-deals', icon: Network, label: 'Club Deals & SPV' },
+            { to: '/nextgen', icon: GraduationCap, label: 'Académie NextGen' },
             { to: '/web3', icon: Globe, label: 'Web3 & RWA' },
             { to: '/market-intelligence', icon: LineChart, label: 'Intelligence Marché' },
             { to: '/esg', icon: Target, label: 'ESG & Carbone' },
@@ -55,10 +58,12 @@ const navSections = [
         items: [
             { to: '/portfolio', icon: LineChart, label: 'Gestion de portefeuille' },
             { to: '/trading', icon: Zap, label: 'Trading' },
+            { to: '/real-estate', icon: Building, label: 'Real Estate' },
+            { to: '/alternatives', icon: Gem, label: 'Alternatifs' },
+            { to: '/art-vault', icon: Palette, label: 'Art & Objets de Valeur' },
             { to: '/marketplace', icon: Store, label: 'Place de marché' },
             { to: '/cash', icon: Landmark, label: 'Cash haut rendement' },
             { to: '/goals', icon: Target, label: 'Objectifs de vie' },
-            { to: '/alternatives', icon: Gem, label: 'Alternatifs' },
             { to: '/multi-currency', icon: Globe, label: 'Multi-devises' },
             { to: '/simulator', icon: Sliders, label: 'Simulateur' },
             { to: '/risk', icon: AlertTriangle, label: 'Analyse de risque' },

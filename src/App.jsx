@@ -54,6 +54,10 @@ import CorporateWealth from './pages/CorporateWealth';
 import ComplianceAML from './pages/ComplianceAML';
 import LegalTax from './pages/LegalTax';
 import Concierge from './pages/Concierge';
+import RealEstate from './pages/RealEstate';
+import ClubDeals from './pages/ClubDeals';
+import ArtVault from './pages/ArtVault';
+import NextGen from './pages/NextGen';
 import './index.css';
 
 function App() {
@@ -127,6 +131,10 @@ function App() {
             <Route path="/aml" element={<ComplianceAML />} />
             <Route path="/legal-tax" element={<LegalTax />} />
             <Route path="/concierge" element={<Concierge />} />
+            <Route path="/real-estate" element={<RealEstate />} />
+            <Route path="/club-deals" element={<ClubDeals />} />
+            <Route path="/art-vault" element={<ArtVault />} />
+            <Route path="/nextgen" element={<NextGen />} />
           </Routes>
         </main>
         <DiambarAI />
