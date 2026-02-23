@@ -89,8 +89,8 @@ const navSections = [
             { to: '/compliance', icon: Shield, label: 'Conformité' },
             { to: '/admin', icon: Database, label: 'Admin. Système' },
             { to: '/audit', icon: Eye, label: 'Audit trail' },
-            { to: '/settings', icon: Settings, label: 'Paramètres' },
             { to: '/education', icon: BookOpen, label: 'Centre éducatif' },
+            { to: '/docs', icon: FileText, label: 'Documentation' },
         ],
     },
 ];

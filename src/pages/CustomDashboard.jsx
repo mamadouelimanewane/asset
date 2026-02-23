@@ -3,7 +3,7 @@ import {
     LayoutDashboard, Plus, Save, RotateCcw, Eye, Grid3X3,
     TrendingUp, Users, DollarSign, RefreshCw, Shield, Zap,
     BarChart3, PieChart, Activity, Clock, FileText, Calculator,
-    ArrowUpDown, X, Check, ChevronDown, Grip, Settings
+    ArrowUpDown, X, Check, ChevronDown, Grip, Settings, Building
 } from 'lucide-react';
 import {
     ResponsiveContainer, AreaChart, Area, XAxis, YAxis, CartesianGrid,

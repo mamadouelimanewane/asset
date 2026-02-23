@@ -59,6 +59,7 @@ import ClubDeals from './pages/ClubDeals';
 import ArtVault from './pages/ArtVault';
 import NextGen from './pages/NextGen';
 import Landing from './pages/Landing';
+import Documentation from './pages/Documentation';
 import './index.css';
 
 function MainApp() {
@@ -144,6 +145,7 @@ function MainApp() {
           <Route path="/club-deals" element={<ClubDeals />} />
           <Route path="/art-vault" element={<ArtVault />} />
           <Route path="/nextgen" element={<NextGen />} />
+          <Route path="/docs" element={<Documentation />} />
         </Routes>
       </main>
       <DiambarAI />
