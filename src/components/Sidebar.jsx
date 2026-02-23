@@ -12,26 +12,6 @@ import {
 
 const navSections = [
     {
-        title: '🌟 Élite & Corporate',
-        items: [
-            { to: '/concierge', icon: Palmtree, label: 'Conciergerie & CBI' },
-            { to: '/corporate-wealth', icon: Building2, label: 'Holding & ESOP' },
-            { to: '/club-deals', icon: Network, label: 'Club Deals & SPV' },
-            { to: '/nextgen', icon: GraduationCap, label: 'Académie NextGen' },
-            { to: '/web3', icon: Globe, label: 'Web3 & RWA' },
-            { to: '/market-intelligence', icon: LineChart, label: 'Intelligence Marché' },
-            { to: '/esg', icon: Target, label: 'ESG & Carbone' },
-        ],
-    },
-    {
-        title: '🤖 IA Générative',
-        items: [
-            { to: '/copilot', icon: Sparkles, label: 'Diambar Copilot' },
-            { to: '/behavioral', icon: Brain, label: 'Hyper-Perso IA' },
-            { to: '/optimizer', icon: Cpu, label: 'Neural Optimizer' },
-        ],
-    },
-    {
         title: 'Aperçu',
         items: [
             { to: '/dashboard', icon: LayoutDashboard, label: 'Tableau de bord' },
@@ -79,6 +59,26 @@ const navSections = [
             { to: '/reporting', icon: FileText, label: 'Rapports' },
             { to: '/estate-planning', icon: GitBranch, label: 'Succession' },
             { to: '/african-payments', icon: MapPin, label: 'Trésorerie Panafricaine' },
+        ],
+    },
+    {
+        title: '🌟 Élite & Corporate',
+        items: [
+            { to: '/concierge', icon: Palmtree, label: 'Conciergerie & CBI' },
+            { to: '/corporate-wealth', icon: Building2, label: 'Holding & ESOP' },
+            { to: '/club-deals', icon: Network, label: 'Club Deals & SPV' },
+            { to: '/nextgen', icon: GraduationCap, label: 'Académie NextGen' },
+            { to: '/web3', icon: Globe, label: 'Web3 & RWA' },
+            { to: '/market-intelligence', icon: LineChart, label: 'Intelligence Marché' },
+            { to: '/esg', icon: Target, label: 'ESG & Carbone' },
+        ],
+    },
+    {
+        title: '🤖 IA Générative',
+        items: [
+            { to: '/copilot', icon: Sparkles, label: 'Diambar Copilot' },
+            { to: '/behavioral', icon: Brain, label: 'Hyper-Perso IA' },
+            { to: '/optimizer', icon: Cpu, label: 'Neural Optimizer' },
         ],
     },
     {
